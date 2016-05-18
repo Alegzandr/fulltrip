@@ -6,3 +6,21 @@ EntityBundle\Entity\User:
             type: integer
             generator:
                 strategy: AUTO
+    fields:
+        firstName:
+            type: string
+            length: 255
+            column: first_name
+        lastName:
+            type: string
+            length: 255
+            column: last_name
+        birthdate:
+            type: date
+        gender:
+            type: string
+            length: 1
+        imageName:
+            type: string
+            lenght: 255
+            column: image_name
