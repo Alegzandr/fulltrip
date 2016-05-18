@@ -89,5 +89,5 @@ vich_uploader:
     mappings:
         avatar:
             uri_prefix: /upload/avatar
-            upload_destination: %kernel.root_dir%/../upload/avatar
+            upload_destination: %kernel.root_dir%/../web/upload/avatar
             namer: vich_uploader.namer_uniqid
