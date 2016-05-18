@@ -1,9 +1,9 @@
-user:
-    resource: "@UserBundle/Resources/config/routing.yml"
-    prefix:   /
-
 fulltrip:
     resource: "@FulltripBundle/Resources/config/routing.yml"
+    prefix:   /
+
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
     prefix:   /
 
 fos_user:
