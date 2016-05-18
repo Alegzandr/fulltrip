@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FullTrip | {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">Proposer une activité</a></li>
+            <li><a href="#">Inscription / Connexion</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main role="main">
+    {% block main %}{% endblock %}
+</main>
+
+<footer>
+    <span>&copy; 2016 FullTrip</span>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+{% block javascripts %}{% endblock %}
+</body>
+</html>

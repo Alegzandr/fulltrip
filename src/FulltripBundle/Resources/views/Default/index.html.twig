@@ -1,0 +1,14 @@
+{% extends 'FullTripBundle::base.html.twig' %}
+{% block title %}Accueil{% endblock %}
+
+{% block main %}
+    <section class="splash">
+        <h1>Profitez pleinement de vos vacances</h1>
+        <h2>avec</h2>
+        <img src="{{ asset('img/logo-color.png') }}" alt="FullTrip logo">
+
+        <form action="/search" method="post" name="search">
+            <input type="search">
+        </form>
+    </section>
+{% endblock %}

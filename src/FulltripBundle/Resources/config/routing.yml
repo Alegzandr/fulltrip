@@ -1,0 +1,3 @@
+fulltrip_homepage:
+    path:     /
+    defaults: { _controller: FulltripBundle:Default:index }
