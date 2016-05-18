@@ -1,0 +1,9 @@
+{% extends "FulltripBundle::base.html.twig" %}
+
+{% block title %}Modifier mon profil{% endblock %}
+
+{% block fos_user_content %}
+    <h1>Modifier le profil</h1>
+    <hr>
+    {% include "UserBundle:Profile:edit_content.html.twig" %}
+{% endblock fos_user_content %}

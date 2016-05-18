@@ -1,0 +1,4 @@
+EntityBundle\Entity\User:
+    avatar:
+        mapping:           avatar
+        filename_property: avatar_name

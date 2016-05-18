@@ -1,0 +1,20 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="fos_user_user_show">
+
+    <img src="
+        {% if user.avatarName is not empty %}
+            {{ vich_uploader_asset(user, 'avatar') }}
+        {% else %}
+            {{ asset('img/avatar-default.png') }}
+        {% endif %}
+    " alt="Avatar">
+
+    <p>{{ 'profile.show.firstname'|trans }}: {{ user.firstname }}</p>
+    <p>{{ 'profile.show.lastname'|trans }}: {{ user.lastname }}</p>
+    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+    <p>{{ 'profile.show.birthdate'|trans }}: {{ user.birthdate|date('d/m/Y') }}</p>
+    <p>{{ 'profile.show.gender'|trans }}: {{ user.gender }}</p>
+
+
+</div>

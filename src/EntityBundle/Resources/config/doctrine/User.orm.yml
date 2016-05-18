@@ -20,7 +20,13 @@ EntityBundle\Entity\User:
         gender:
             type: string
             length: 1
-        imageName:
+        avatarName:
             type: string
             lenght: 255
-            column: image_name
+            column: avatar_name
+            nullable: true
+        updatedAt:
+            type: datetime
+            column: updated_at
+            nullable: true
+
