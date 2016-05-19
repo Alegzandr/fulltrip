@@ -14,6 +14,9 @@ security:
         main:
             pattern: ^/
             form_login:
+                check_path: /login_check
+                success_handler: authentication_handler
+                failure_handler: authentication_handler
                 provider: fos_userbundle
                 csrf_token_generator: security.csrf.token_manager
                 # if you are using Symfony < 2.8, use the following config instead:

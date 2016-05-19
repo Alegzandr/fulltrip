@@ -12,12 +12,17 @@
     <nav>
         <ul>
             <li><a href="#">Proposer une activité</a></li>
-            <li><a href="#">Inscription / Connexion</a></li>
+            <li><a href="#" id="login">Inscription / Connexion</a></li>
         </ul>
     </nav>
 </header>
 
 <main role="main">
+
+    <div class="mask"></div>
+    <div class="login-popup">
+        {% render url('fos_user_security_login') %}
+    </div>
     {% if app.request.hasPreviousSession %}
         {% for type, messages in app.session.flashbag.all() %}
             {% for message in messages %}
@@ -41,6 +46,8 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="{{ asset('js/modals.js') }}"></script>
+<script src="{{ asset('js/login.js') }}"></script>
 {% block javascripts %}{% endblock %}
 </body>
 </html>

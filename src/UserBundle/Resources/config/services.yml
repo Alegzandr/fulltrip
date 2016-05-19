@@ -1,4 +1,12 @@
+parameters:
+    vendor_security.authentication_handler: UserBundle\Handler\AuthenticationHandler
+
 services:
+    authentication_handler:
+        class:  UserBundle\Handler\AuthenticationHandler
+        arguments:  [@router]
+        tags:
+            - { name: 'monolog.logger', channel: 'security' }
     app.form.registration:
             class: UserBundle\Form\RegistrationType
             tags:
