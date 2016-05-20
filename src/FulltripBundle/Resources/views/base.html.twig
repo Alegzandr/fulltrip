@@ -20,23 +20,25 @@
 
 <main role="main">
 
-    <div class="mask"></div>
-    <div class="login-popup">
-        {% render url('fos_user_security_login') %}
-    </div>
-    {% if app.request.hasPreviousSession %}
-        {% for type, messages in app.session.flashbag.all() %}
-            {% for message in messages %}
-                <div class="flash-{{ type }}">
-                    {{ message }}
-                </div>
+    <div class="modal">
+        <div class="mask"></div>
+        <div class="login-popup">
+            {% render url('fos_user_security_login') %}
+        </div>
+        {% if app.request.hasPreviousSession %}
+            {% for type, messages in app.session.flashbag.all() %}
+                {% for message in messages %}
+                    <div class="flash-{{ type }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
             {% endfor %}
-        {% endfor %}
-    {% endif %}
+        {% endif %}
 
-    <div>
-        {% block fos_user_content %}
-        {% endblock fos_user_content %}
+        <div>
+            {% block fos_user_content %}
+            {% endblock fos_user_content %}
+        </div>
     </div>
 
     {% block main %}{% endblock %}

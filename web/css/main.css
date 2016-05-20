@@ -51,61 +51,49 @@ table {
 @font-face {
   font-family: "Harabara Mais Light";
   src: url("../fonts/harabara-mais-light.otf"); }
-.login-popup {
-  background: #fff;
-  padding: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 99999; }
-
-.mask {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(38, 38, 42, 0.8);
-  z-index: 9999; }
-
-.login-popup {
-  display: none;
-  background: #fff;
-  padding: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 99999; }
-
-.login-popup {
-  width: 270px;
-  height: 310px; }
-
-.login-popup > h3 {
-  text-align: center; }
-
-label {
-  text-align: left; }
-
-input[type="text"], input[type="password"] {
-  width: 90%; }
-
-input {
-  margin-top: 10px;
-  margin-bottom: 10px; }
-
-.center-elements {
-  margin-top: 15px;
-  text-align: center; }
-
-input[type="submit"] {
-  margin-top: 10px; }
+.modal {
+  /*.center-elements {
+    margin-top: 15px;
+    text-align: center;
+  }*/ }
+  .modal .login-popup {
+    background: #fff;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    margin: 0 auto;
+    display: none;
+    width: 35vw;
+    height: 30vh;
+    text-align: center; }
+  .modal .mask {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100; }
+  .modal input[type="text"], .modal input[type="password"] {
+    width: 60%; }
+  .modal input {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .modal input[type="submit"] {
+    margin-top: 10px; }
+  .modal .fa-times {
+    float: right;
+    position: relative;
+    font-size: 1.8em;
+    right: -10px;
+    top: -15px; }
 
 html {
-  font-size: 100%; }
+  font-size: 80%; }
 
 body {
   overflow-x: hidden; }
@@ -179,21 +167,23 @@ header {
     position: absolute;
     top: 70%;
     left: 50%;
-    font-size: 2.5em;
+    font-size: 1.875em;
     color: #fff;
     transform: translate(-50%, -50%);
-    padding: 15px 120px;
+    padding: 15px 20px;
     background-color: rgba(0, 0, 0, 0.5);
     border: 0;
-    border-radius: 15px; }
+    border-radius: 15px;
+    font-family: "Harabara Mais Light", sans-serif;
+    text-transform: uppercase; }
   .splash .fa-search {
     position: absolute;
     color: #fff;
     transform: translate(-50%, -50%);
-    top: 70.5%;
+    top: 69.5%;
     left: 50%;
-    margin-left: 276px;
-    font-size: 2.4em;
+    margin-left: 235px;
+    font-size: 2.3em;
     cursor: pointer; }
   .splash hr {
     border: 0;

@@ -3,26 +3,36 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block fos_user_content %}
-{% if error %}
-    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-{% endif %}
-    <div id="login-popup">
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+    <div class="login-popup">
+        <i class="fa fa-times" aria-hidden="true"></i>
+        <h3>Se Connecter</h3>
         <form name="fos_user_login_form" action="{{ path("fos_user_security_check") }}" method="post">
             <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
 
-            <label for="username">{{ 'security.login.username'|trans }}</label>
-            <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input type="text" id="username" name="_username" value="{{ last_username }}" required="required"
+                   placeholder="ken.kaneki@fulltrip.fr"/><br>
 
-            <label for="password">{{ 'security.login.password'|trans }}</label>
-            <input type="password" id="password" name="_password" required="required" />
+            <div class="center-password">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <input type="password" id="password" name="_password" required="required"
+                       placeholder="&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;"/><br>
+            </div>
+            <hr>
 
-            <div class="center-elements">
+            <div class="error"></div>
+
                 <input type="checkbox" id="remember_me" name="_remember_me" value="on"/>
                 <label for="remember_me" id="remember_me-label">{{ 'security.login.remember_me'|trans }}</label><br>
-                <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}"/>
-            </div>
-            <div class="error"></div>
+                <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}"/><br>
+                <a href="/register">
+                    <input type="button" value="Devenir membre">
+                </a>
+
         </form>
-        <a href="/register">S'inscrire</a>
+
     </div>
 {% endblock fos_user_content %}

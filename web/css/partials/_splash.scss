@@ -34,6 +34,7 @@
     letter-spacing: 4px;
   }
 
+
   h1:nth-of-type(2) {
     font-size: 3.125em;
     top: 15%;
@@ -49,23 +50,25 @@
     position: absolute;
     top: 70%;
     left: 50%;
-    font-size: 2.5em;
+    font-size: 1.875em;
     color: #fff;
     transform: translate(-50%, -50%);
-    padding: 15px 120px;
+    padding: 15px 20px;
     background-color: rgba(0, 0, 0, .5);
     border: 0;
     border-radius: 15px;
+    font-family: "Harabara Mais Light", sans-serif;
+    text-transform: uppercase;
   }
 
   .fa-search {
     position: absolute;
     color: #fff;
     transform: translate(-50%, -50%);
-    top: 70.5%;
+    top: 69.5%;
     left: 50%;
-    margin-left: 276px;
-    font-size: 2.4em;
+    margin-left: 235px;
+    font-size: 2.3em;
     cursor: pointer;
   }
 
