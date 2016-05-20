@@ -6,7 +6,7 @@
   background-size: cover;
 
   width: 100vw;
-  height: 99vh;
+  height: 100vh;
   margin: 0;
 
   position: relative;
@@ -52,10 +52,21 @@
     font-size: 2.5em;
     color: #fff;
     transform: translate(-50%, -50%);
-    padding: 20px 70px;
+    padding: 15px 120px;
     background-color: rgba(0, 0, 0, .5);
     border: 0;
     border-radius: 15px;
+  }
+
+  .fa-search {
+    position: absolute;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    top: 70.5%;
+    left: 50%;
+    margin-left: 276px;
+    font-size: 2.4em;
+    cursor: pointer;
   }
 
   hr {
@@ -64,7 +75,7 @@
     width: 100vw;
     background-color: #b0bec5;
     position: absolute;
-    top: 98vh;
+    top: 99vh;
     left: 0;
     z-index: 2;
   }
