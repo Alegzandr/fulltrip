@@ -3,12 +3,15 @@
 
 {% block main %}
     <section class="splash">
-    <h1>Profitez pleinement de vos vacances</h1>
-    <h2>avec</h2>
-    <img src="{{ asset('img/logo-color.png') }}" alt="FullTrip logo">
+        <h1>Profitez pleinement</h1>
+        <h1>de vos vacances</h1>
+        <h2>avec</h2>
+        <img src="{{ asset('img/logo-color.png') }}" alt="FullTrip logo" class="logo">
 
-    <form action="/search" method="post" name="search">
-        <input type="search">
-    </form>
-</section>
+        <form action="/search" method="get" name="search">
+            <input type="search">
+        </form>
+
+        <hr>
+    </section>
 {% endblock %}

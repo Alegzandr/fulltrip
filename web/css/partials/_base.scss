@@ -2,6 +2,10 @@ html {
   font-size: $font-scale;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 section {
   font-size: 1rem;
 }
