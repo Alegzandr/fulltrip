@@ -1,3 +1,11 @@
+fulltrip_post_create:
+    path:     /post/create
+    defaults: { _controller: FulltripBundle:Post:create }
+
+fulltrip_search:
+    path:     /search
+    defaults: { _controller: FulltripBundle:Search:index }
+
 fulltrip_homepage:
     path:     /
     defaults: { _controller: FulltripBundle:Default:index }

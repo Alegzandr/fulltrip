@@ -1,0 +1,16 @@
+{% extends 'FulltripBundle::base.html.twig' %}
+
+{% block title %}Recherche de lieux{% endblock %}
+{% block main %}
+    <section>
+        {{ form_start(form, {'name': 'search', 'action': path('fulltrip_search')}) }}
+        {{ form_widget(form.city, { 'attr': {'class': 'city'} }) }}
+        {{ form_end(form) }}
+
+        <ul>
+            {% for places in places %}
+                <li>{{ places.name }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}
