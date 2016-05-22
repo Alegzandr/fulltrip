@@ -8,10 +8,10 @@
         <h2>avec</h2>
         <img src="{{ asset('img/logo-color.png') }}" alt="FullTrip logo" class="logo">
 
-        <form action="/search" method="get" name="search">
-                <input type="search" placeholder="Rechercher une ville" size="45">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </form>
+        {{ form_start(form, {'name': 'search', 'action': path('fulltrip_search')}) }}
+        {{ form_widget(form.city, { 'attr': {'size': '45'} }) }}
+        <i class="fa fa-search" aria-hidden="true"></i>
+        {{ form_end(form) }}
         <hr>
     </section>
     <section class="second-section">
