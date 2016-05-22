@@ -19,5 +19,10 @@ $(function () {
         $('.mask').fadeOut();
     });
 
+    $('.fa-times').click(function () {
+        $('.login-popup').fadeOut();
+        $('.mask').fadeOut();
+    })
+
 });
 

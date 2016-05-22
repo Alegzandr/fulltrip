@@ -1,43 +1,32 @@
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-
-  nav {
-    ul > li {
-      display: inline-block;
-    }
-  }
-
-  nav a, nav a:hover, nav a:active {
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-family: "Harabara Mais", sans-serif;
-    text-transform: uppercase;
-    font-size: 1.25em;
-  }
-
-   nav > ul > li:first-of-type {
-     a {
-       border: 2px solid #fff;
-       border-radius: 10px;
-     }
-  }
-
-  nav > ul {
-    width: 100vw;
-    margin-top: 40px;
-  }
-
-  nav > ul > li:nth-of-type(1) {
-    float: left;
-    margin-left: 40px;
-  }
-
-  nav > ul > li:nth-of-type(2) {
-    float: right;
-    margin-right: 40px;
-  }
+header > nav > ul{
+  display: none;
 }
+
+header {
+  height: 75px;
+  line-height: 75px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.logo {
+  height: 64.5px;
+  margin-top: 5px;
+  margin-left: -50px;
+}
+
+.sm-menu {
+  float: left;
+  margin-top: 29.5px;
+  margin-left: 25px;
+}
+
+
+
+
+
+
+
+
+
+

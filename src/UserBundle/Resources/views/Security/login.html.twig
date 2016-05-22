@@ -7,10 +7,11 @@
         <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
     <div class="login-popup">
-        <i class="fa fa-times" aria-hidden="true"></i>
-        <h3>Se Connecter</h3>
         <form name="fos_user_login_form" action="{{ path("fos_user_security_check") }}" method="post">
             <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
+
+            <i class="fa fa-times" aria-hidden="true"></i>
+            <h3>Se Connecter</h3>
 
             <i class="fa fa-user" aria-hidden="true"></i>
             <input type="text" id="username" name="_username" value="{{ last_username }}" required="required"

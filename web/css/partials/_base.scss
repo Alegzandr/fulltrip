@@ -2,10 +2,10 @@ html {
   font-size: $font-scale;
 }
 
-body {
-  overflow-x: hidden;
+input, button, select, option, textarea {
+  font-size: 100%;
 }
 
-section {
-  font-size: 1rem;
+body {
+  overflow-x: hidden;
 }

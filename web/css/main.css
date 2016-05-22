@@ -51,148 +51,89 @@ table {
 @font-face {
   font-family: "Harabara Mais Light";
   src: url("../fonts/harabara-mais-light.otf"); }
-.modal {
-  /*.center-elements {
-    margin-top: 15px;
-    text-align: center;
-  }*/ }
-  .modal .login-popup {
-    background: #fff;
-    padding: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 101;
-    margin: 0 auto;
-    display: none;
-    width: 35vw;
-    height: 30vh;
-    text-align: center; }
-  .modal .mask {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 100; }
-  .modal input[type="text"], .modal input[type="password"] {
-    width: 60%; }
-  .modal input {
-    margin-top: 10px;
-    margin-bottom: 10px; }
-  .modal input[type="submit"] {
-    margin-top: 10px; }
-  .modal .fa-times {
-    float: right;
-    position: relative;
-    font-size: 1.8em;
-    right: -10px;
-    top: -15px; }
+.modal .login-popup {
+  display: none; }
 
 html {
   font-size: 80%; }
 
+input, button, select, option, textarea {
+  font-size: 100%; }
+
 body {
   overflow-x: hidden; }
 
-section {
-  font-size: 1rem; }
+header > nav > ul {
+  display: none; }
 
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1; }
-  header nav ul > li {
-    display: inline-block; }
-  header nav a, header nav a:hover, header nav a:active {
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-family: "Harabara Mais", sans-serif;
-    text-transform: uppercase;
-    font-size: 1.25em; }
-  header nav > ul > li:first-of-type a {
-    border: 2px solid #fff;
-    border-radius: 10px; }
-  header nav > ul {
-    width: 100vw;
-    margin-top: 40px; }
-  header nav > ul > li:nth-of-type(1) {
-    float: left;
-    margin-left: 40px; }
-  header nav > ul > li:nth-of-type(2) {
-    float: right;
-    margin-right: 40px; }
+  height: 75px;
+  line-height: 75px;
+  overflow: hidden;
+  text-align: center; }
+
+.logo {
+  height: 64.5px;
+  margin-top: 5px;
+  margin-left: -50px; }
+
+.sm-menu {
+  float: left;
+  margin-top: 29.5px;
+  margin-left: 25px; }
 
 .splash {
-  background: url(../img/splash.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url(../img/sm-splash.jpg) no-repeat top center;
   width: 100vw;
   height: 100vh;
-  margin: 0;
   position: relative;
-  z-index: 0; }
+  z-index: 0;
+  text-align: center; }
   .splash .logo {
-    width: 200px;
+    display: none; }
+  .splash h2 {
+    display: none; }
+  .splash h1, .splash input[type="search"] {
     position: absolute;
-    top: 38%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-  .splash h1, .splash h2 {
     font-family: "Harabara Mais Light", sans-serif;
     color: #fff;
-    text-transform: uppercase;
-    font-size: 1.875em;
-    text-align: center;
-    position: absolute;
-    top: 10%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    letter-spacing: 4px; }
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: block; }
+  .splash h1 {
+    text-transform: uppercase;
+    letter-spacing: 1.2px; }
+  .splash h1:nth-of-type(1) {
+    font-family: "Harabara Mais Light", sans-serif;
+    font-size: 1.4em;
+    width: 100vw;
+    top: 115px; }
   .splash h1:nth-of-type(2) {
-    font-size: 3.125em;
-    top: 15%; }
-  .splash h2 {
-    top: 21%;
-    font-family: "Harabara Mais", sans-serif;
-    color: #c31a45; }
+    font-family: "Harabara Mais Light", sans-serif;
+    font-size: 2.25em;
+    display: block;
+    width: 100vw;
+    top: 160px; }
   .splash input[type="search"] {
     position: absolute;
-    top: 70%;
-    left: 50%;
-    font-size: 1.875em;
     color: #fff;
-    transform: translate(-50%, -50%);
-    padding: 15px 20px;
+    padding: 10px 15px;
     background-color: rgba(0, 0, 0, 0.5);
     border: 0;
-    border-radius: 15px;
-    font-family: "Harabara Mais Light", sans-serif;
-    text-transform: uppercase; }
+    top: 225px; }
   .splash .fa-search {
     position: absolute;
     color: #fff;
-    transform: translate(-50%, -50%);
-    top: 69.5%;
-    left: 50%;
-    margin-left: 235px;
-    font-size: 2.3em;
-    cursor: pointer; }
+    top: 232px;
+    font-size: 1.5em;
+    cursor: pointer;
+    left: 334px; }
   .splash hr {
-    border: 0;
-    height: 10px;
-    width: 100vw;
-    background-color: #b0bec5;
-    position: absolute;
-    top: 99vh;
-    left: 0;
-    z-index: 2; }
+    position: relative;
+    top: 259px;
+    width: 88%;
+    border-top: 1px solid #fff;
+    border-bottom: 0; }
 
 /*# sourceMappingURL=main.css.map */
