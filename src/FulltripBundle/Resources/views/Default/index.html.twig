@@ -9,7 +9,7 @@
         <img src="{{ asset('img/logo-color.png') }}" alt="FullTrip logo" class="logo">
 
         {{ form_start(form, {'name': 'search', 'action': path('fulltrip_search')}) }}
-        {{ form_widget(form.city, { 'attr': {'size': '45'} }) }}
+        {{ form_widget(form.city) }}
         <i class="fa fa-search" aria-hidden="true"></i>
         {{ form_end(form) }}
         <hr>

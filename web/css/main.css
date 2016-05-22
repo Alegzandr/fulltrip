@@ -84,6 +84,7 @@ header {
 
 .splash {
   background: url(../img/sm-splash.jpg) no-repeat top center;
+  background-size: 100%;
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -121,18 +122,19 @@ header {
     padding: 10px 15px;
     background-color: rgba(0, 0, 0, 0.5);
     border: 0;
-    top: 225px; }
+    top: 225px;
+    width: 85vw; }
   .splash .fa-search {
     position: absolute;
     color: #fff;
     top: 232px;
     font-size: 1.5em;
     cursor: pointer;
-    left: 334px; }
+    margin-left: 146px; }
   .splash hr {
     position: relative;
     top: 259px;
-    width: 88%;
+    width: 80%;
     border-top: 1px solid #fff;
     border-bottom: 0; }
 
