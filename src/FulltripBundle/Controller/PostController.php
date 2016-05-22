@@ -9,7 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use FulltripBundle\Form\PostType;
+use FulltripBundle\Form\PostFormType;
 use Symfony\Component\HttpFoundation\Response;
 
 class PostController extends Controller
@@ -18,7 +18,7 @@ class PostController extends Controller
     {
         if ($this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY')) {
             $place = new Place();
-            $form = $this->createForm(PostType::class, $place);
+            $form = $this->createForm(PostFormType::class, $place);
 
             $form->handleRequest($request);
             if ($form->isSubmitted() && $form->isValid()) {
