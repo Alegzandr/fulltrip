@@ -1,3 +1,7 @@
+fulltrip_post:
+    path:     /post/{id}
+    defaults: { _controller: FulltripBundle:Post:show }
+
 fulltrip_post_create:
     path:     /post/create
     defaults: { _controller: FulltripBundle:Post:create }

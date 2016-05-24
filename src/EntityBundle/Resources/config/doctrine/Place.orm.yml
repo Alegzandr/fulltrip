@@ -15,6 +15,8 @@ EntityBundle\Entity\Place:
         category:
             type: string
             length: 255
+        description:
+            type: text
         address:
             type: string
             length: 255

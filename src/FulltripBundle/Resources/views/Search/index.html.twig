@@ -7,9 +7,13 @@
         {{ form_widget(form.city, { 'attr': {'class': 'city'} }) }}
         {{ form_end(form) }}
 
-        <ul>
+        <ul class="places">
             {% for places in places %}
-                <li>{{ places.name }}</li>
+                <li>
+                    <a href="/post/{{ places.id }}">{{ places.name }}</a>
+                    <hr>
+
+                </li>
             {% endfor %}
         </ul>
     </section>

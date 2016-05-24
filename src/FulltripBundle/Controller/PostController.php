@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use EntityBundle\Entity\Place;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -14,6 +15,14 @@ use Symfony\Component\HttpFoundation\Response;
 
 class PostController extends Controller
 {
+    public function showAction($id)
+    {
+        $place = $this->getDoctrine()
+            ->getRepository('EntityBundle:Place')
+            ->findOneById($id);
+        return $this->render('FulltripBundle:Post:index.html.twig', array('place' => $place));
+    }
+
     public function createAction(Request $request)
     {
         if ($this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY')) {
