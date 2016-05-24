@@ -1,0 +1,44 @@
+.paris {
+  height: 70vw;
+  padding-top: 20px;
+  font-family: "Harabara Mais Light", sans-serif;
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+
+  }
+
+  .destination-text {
+    padding: 0 10px 0 10px;
+    text-align: center;
+
+  }
+
+  p {
+    margin-top: 10px;
+    line-height: 17px;
+
+  }
+  .paris-image {
+    margin-top: 20px;
+    background: url(../img/paris.jpg) no-repeat top center;
+    background-size: 100%;
+    width: 100vw;
+    height: 100%;
+  }
+
+  h4 {
+    font-size: 1.2em;
+    margin-left: 35.52vw;
+    margin-top: 26vw;
+    display: inline-block;
+
+  }
+  .paris-title {
+    font-size: 5em;
+    margin-left: 30vw;
+    margin-top: 30vw;
+    display: inline-block;
+  }
+}

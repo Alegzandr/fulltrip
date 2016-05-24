@@ -13,7 +13,7 @@
     <a href="/#">
         <img src="{{ asset('img/sm-logo.png') }}" alt="FullTrip logo" class="logo">
     </a>
-    <img src="{{ asset('img/sm-menu.png') }}" alt="Mobile menu" class="sm-menu">
+    <img src="{{ asset('img/sm-menu.png') }}" alt="Mobile menu" class="sm-menu menu-icon">
 
     <nav>
         <ul>
@@ -24,7 +24,6 @@
 </header>
 
 <div class="modal">
-    <div class="mask"></div>
     <div class="login-popup">
         {% render url('fos_user_security_login') %}
     </div>
@@ -44,7 +43,34 @@
     </div>
 </div>
 
+<nav>
+    <ul>
+        <li>
+            <a href="/">Page d'acceuil</a>
+        </li>
+        <li>
+            <a href="#">Télécharger l'application</a>
+        </li>
+        <li>
+            <a href="#">Connexion</a>
+        </li>
+        <li>
+            <a href="/register">Inscription</a>
+        </li>
+        <li>
+            <a href="#">Proposer une activité</a>
+        </li>
+        <li>
+            <a href="#">Rechercher</a>
+        </li>
+        <li>
+            <a href="#">Comment ça marche?</a>
+        </li>
+    </ul>
+</nav>
+
 <main role="main">
+    <div class="mask"></div>
     {% block main %}{% endblock %}
 </main>
 
@@ -55,6 +81,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 <script src="{{ asset('js/modals.js') }}"></script>
 <script src="{{ asset('js/login.js') }}"></script>
+<script src="{{ asset('js/menu.js') }}"></script>
 {% block javascripts %}{% endblock %}
 </body>
 </html>

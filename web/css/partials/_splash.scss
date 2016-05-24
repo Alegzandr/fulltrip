@@ -1,9 +1,8 @@
 .splash {
-
   background: url(../img/sm-splash.jpg) no-repeat top center;
   background-size: 100%;
   width: 100vw;
-  height: 100vh;
+  height: 65vw;
   position: relative;
   z-index: 0;
   text-align: center;
@@ -35,7 +34,7 @@
     font-family: "Harabara Mais Light", sans-serif;
     font-size: 1.4em;
     width: 100vw;
-    top: 115px;
+    top: 29vw;
   }
 
     h1:nth-of-type(2) {
@@ -43,7 +42,7 @@
     font-size: 2.25em;
     display: block;
     width: 100vw;
-    top: 160px;
+    top: 35vw;
   }
 
   input[type="search"] {
@@ -52,22 +51,22 @@
     padding: 10px 15px;
     background-color: rgba(0, 0, 0, .5);
     border: 0;
-    top: 225px;
+    top: 53vw;
     width: 85vw;
   }
 
   .fa-search {
     position: absolute;
     color: $secondary-color;
-    top: 232px;
+    top: 55vw;
     font-size: 1.5em;
     cursor: pointer;
-    margin-left: 146px;
+    margin-left: 34vw;
   }
 
   hr {
     position: relative;
-    top: 259px;
+    top: 62vw;
     width: 80%;
     border-top: 1px solid $secondary-color;
     border-bottom: 0;
