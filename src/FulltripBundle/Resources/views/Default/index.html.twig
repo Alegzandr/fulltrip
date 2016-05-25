@@ -14,14 +14,152 @@
         {{ form_end(form) }}
         <hr>
     </section>
-    <section class="second-section">
-        <h2>Comment ça marche?</h2>
-        <div>
-
+    <section class="paris">
+        <div class="destination-text">
+            <h2>
+                Nos destinations du moment
+            </h2>
+            <p>
+                Découvrez notre trio du moment, les 3 destinations les
+                plus recommandées par les membres de FullTrip.
+            </p>
         </div>
+        <div class="paris-image">
+            <h4>
+                La Ville&nbsp;Lumière
+            </h4>
+            <h2 class="destination-title">
+                Paris
+            </h2>
 
+            <div class="gradient-bottom">
+                <div class="stars-container">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="activities-container">
+                <p class="activities-number">
+                    657
+                </p>
+                <p class="activities-text">
+                    activités
+                </p>
+            </div>
+        </div>
+        </div>
     </section>
-    <section>
-
+    <section class="bastia">
+        <h4>
+            L'Ile de beauté
+        </h4>
+        <h2 class="destination-title">
+            Bastia
+        </h2>
+        <div class="gradient-bottom">
+            <div class="stars-container">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+        </div>
+        </div>
+        <div class="activities-container">
+            <p class="activities-number">
+                359
+            </p>
+            <p class="activities-text">
+                activités
+            </p>
+        </div>
+    </section>
+    <section class="lyon">
+        <h4>
+            La Capitale des&nbsp;Gaules
+        </h4>
+        <h2 class="destination-title">
+            Lyon
+        </h2>
+        <div class="gradient-bottom">
+            <div class="stars-container">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="activities-container">
+            <p class="activities-number">
+                234
+            </p>
+            <p class="activities-text">
+                activités
+            </p>
+        </div>
+    </section>
+    <section class="notices">
+        <div class="notices-text">
+            <h2>
+                Ils sont partis avec Fulltrip
+            </h2>
+            <p>
+                Découvrez les commentaires de personnes qui ont utilisé Fulltrip pour organiser leurs vacances.
+            </p>
+        </div>
+        <div class="notice-container">
+            <h6 class="first-user-name">
+                Quentin <span class="name">Buchet</span>, Paris
+            </h6>
+            <img src="{{ asset('img/profil-1.png') }}" alt="Quentin Buchet" class="first-notice-image">
+            <p class="first-user-notice">
+                “ Nous sommes partis à Saint-Jean-de-Luz et nous n’avons pas pas été déçus ! Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Mauris ac consectetur odi ”
+                <span class="place-time">Séjour à Saint-Jean-de-Luz - 24/04/2016</span>
+            </p>
+            <h6 class="second-user-name">
+                Laurie <span class="name">Seiller</span>, Paris
+            </h6>
+           <p class="second-user-notice">
+                “ Nous sommes partis à Saint-Jean-de-Luz et nous n’avons pas pas été déçus ! Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Mauris ac consectetur odio ”
+               <span class="place-time">Séjour à Bordeaux - 22/02/2015</span>
+            </p>
+            <img src="{{ asset('img/profil-2.png') }}" alt="Laurie Seiller" class="second-notice-image">
+        </div>
+    </section>
+    <section class="social-network">
+        <h4>
+            A vos marques... Prêts ...
+        </h4>
+        <h2>
+            Partez
+        </h2>
+        <h5>
+            Avec
+        </h5>
+        <img src="{{ asset('img/logo-color.png') }}" alt="FullTrip logo" class="bottom-logo">
+        <h6>
+            Pour rester informés de notre actualité
+        </h6>
+        <h3>
+            Suivez nous sur les réseaux sociaux
+        </h3>
+        <div class="icons-container">
+            <a href="#">
+                <img src="{{ asset('img/facebook.png') }}" alt="Facebook" class="social-icons">
+            </a>
+            <a href="#">
+                <img src="{{ asset('img/twitter.png') }}" alt="Twitter" class="social-icons">
+            </a>
+            <a href="#">
+                <img src="{{ asset('img/instagram.png') }}" alt="Instagram" class="social-icons">
+            </a>
+            <a href="#">
+                <img src="{{ asset('img/snapchat.png') }}" alt="Snapchat" class="social-icons">
+            </a>
+            <a href="#">
+                <img src="{{ asset('img/pinterest.png') }}" alt="Pinterest" class="social-icons">
+            </a>
+        </div>
     </section>
 {% endblock %}

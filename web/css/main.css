@@ -54,6 +54,16 @@ table {
 .modal .login-popup {
   display: none; }
 
+.mask {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(38, 38, 42, 0.8);
+  z-index: 9999; }
+
 html {
   font-size: 80%; }
 
@@ -69,6 +79,7 @@ header > nav > ul {
 header {
   height: 75px;
   line-height: 75px;
+  width: 100%;
   overflow: hidden;
   text-align: center; }
 
@@ -80,13 +91,26 @@ header {
 .sm-menu {
   float: left;
   margin-top: 29.5px;
-  margin-left: 25px; }
+  margin-left: 25px;
+  cursor: pointer; }
+
+nav {
+  background: url(../img/mobile-menu.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -250px; }
 
 .splash {
   background: url(../img/sm-splash.jpg) no-repeat top center;
   background-size: 100%;
   width: 100vw;
-  height: 100vh;
+  height: 65vw;
   position: relative;
   z-index: 0;
   text-align: center; }
@@ -109,33 +133,340 @@ header {
     font-family: "Harabara Mais Light", sans-serif;
     font-size: 1.4em;
     width: 100vw;
-    top: 115px; }
+    top: 29vw; }
   .splash h1:nth-of-type(2) {
     font-family: "Harabara Mais Light", sans-serif;
     font-size: 2.25em;
     display: block;
     width: 100vw;
-    top: 160px; }
+    top: 35vw; }
   .splash input[type="search"] {
     position: absolute;
     color: #fff;
     padding: 10px 15px;
     background-color: rgba(0, 0, 0, 0.5);
     border: 0;
-    top: 225px;
+    top: 53vw;
     width: 85vw; }
   .splash .fa-search {
     position: absolute;
     color: #fff;
-    top: 232px;
+    top: 55vw;
     font-size: 1.5em;
     cursor: pointer;
-    margin-left: 146px; }
+    margin-left: 34vw; }
   .splash hr {
     position: relative;
-    top: 259px;
+    top: 62vw;
     width: 80%;
     border-top: 1px solid #fff;
     border-bottom: 0; }
+
+.paris {
+  height: 99vw;
+  width: 100vw;
+  padding-top: 20px;
+  font-family: "Harabara Mais Light", sans-serif; }
+  .paris h2 {
+    text-transform: uppercase;
+    font-size: 1.5em; }
+  .paris .destination-text {
+    padding: 0 10px 0 10px;
+    text-align: center;
+    min-width: 350px; }
+  @media screen and (max-width: 374px) {
+    .paris {
+      height: 110vw; }
+      .paris .destination-text {
+        min-width: 300px; } }
+  .paris p {
+    margin-top: 10px;
+    line-height: 17px; }
+  .paris .paris-image {
+    margin-top: 20px;
+    background: url(../img/paris.jpg) no-repeat top center;
+    background-size: 100%;
+    width: 100vw;
+    height: 101vw; }
+  .paris h4 {
+    font-size: 4vw;
+    margin-left: 35vw;
+    margin-top: 26vw;
+    display: inline-block;
+    color: #67b0c9; }
+  .paris .destination-title {
+    font-size: 17.5vw;
+    margin-left: 9.4vw;
+    display: inline-block;
+    letter-spacing: 1.8vw;
+    color: #fff; }
+  .paris .fa-star {
+    color: #fff; }
+  .paris .stars-container {
+    margin-top: 4.5vw;
+    margin-left: 11vw;
+    display: inline-block;
+    font-size: 1.3em; }
+  .paris .gradient-bottom {
+    height: 16vw;
+    width: 100vw;
+    margin-top: 16vw;
+    background: linear-gradient(to top, #c21b45, transparent); }
+  .paris .activities-container {
+    position: relative;
+    display: inline-block;
+    top: -12vw;
+    left: 62vw;
+    height: 50px; }
+  .paris .activities-text {
+    color: #61bfd9;
+    font-size: 2.3vw;
+    font-weight: bold;
+    position: relative;
+    top: -6.5vw;
+    left: 10.7vw;
+    display: inline-block; }
+  .paris .activities-number {
+    font-size: 19vw;
+    color: #61bfd9; }
+
+.bastia {
+  font-family: "Harabara Mais Light", sans-serif;
+  width: 100vw;
+  height: 69vw;
+  background: url(../img/bastia.jpg) no-repeat top center;
+  background-size: 100%; }
+  .bastia .destination-title {
+    font-size: 17.5vw;
+    margin-left: 25vw;
+    display: inline-block;
+    letter-spacing: 1.8vw;
+    color: #fff;
+    text-transform: uppercase; }
+  .bastia h4 {
+    font-size: 4vw;
+    margin-left: 32vw;
+    margin-top: 20vw;
+    display: inline-block;
+    color: #c5234c; }
+  .bastia .gradient-bottom {
+    height: 22vw;
+    width: 100vw;
+    margin-top: 6vw;
+    background: linear-gradient(to top, #67b1c8, transparent); }
+  .bastia .activities-container {
+    position: relative;
+    display: inline-block;
+    top: -16vw;
+    left: 5vw; }
+  .bastia .activities-text {
+    color: #c5234c;
+    font-size: 2.3vw;
+    font-weight: bold;
+    position: relative;
+    top: -10.6vw;
+    left: 10.7vw;
+    display: inline-block; }
+  .bastia .activities-number {
+    font-size: 19vw;
+    color: #c5234c; }
+  .bastia .fa-star, .bastia .fa-star-half-o {
+    color: #fff; }
+  .bastia .stars-container {
+    margin-top: 11.5vw;
+    margin-left: 74vw;
+    display: inline-block;
+    font-size: 1.3em; }
+
+.lyon {
+  font-family: "Harabara Mais Light", sans-serif;
+  width: 100vw;
+  height: 69vw;
+  background: url(../img/lyon.jpg) no-repeat top center;
+  background-size: 100%; }
+  .lyon h4 {
+    font-size: 4vw;
+    margin-left: 30vw;
+    margin-top: 28vw;
+    display: inline-block;
+    color: #67b0c9; }
+  .lyon .destination-title {
+    font-size: 17.5vw;
+    margin-left: 27.4vw;
+    display: inline-block;
+    letter-spacing: 1.8vw;
+    color: #fff;
+    text-transform: uppercase; }
+  .lyon .gradient-bottom {
+    height: 16vw;
+    width: 100vw;
+    margin-top: 4vw;
+    background: linear-gradient(to top, #c21b45, transparent); }
+  .lyon .fa-star, .lyon .fa-star-half-o {
+    color: #fff; }
+  .lyon .stars-container {
+    margin-top: 4.5vw;
+    margin-left: 11vw;
+    display: inline-block;
+    font-size: 1.3em; }
+  .lyon .activities-container {
+    position: relative;
+    display: inline-block;
+    top: -16vw;
+    left: 62vw; }
+  .lyon .activities-text {
+    color: #61bfd9;
+    font-size: 2.3vw;
+    font-weight: bold;
+    position: relative;
+    top: -10.5vw;
+    left: 8.5vw;
+    display: inline-block; }
+  .lyon .activities-number {
+    font-size: 19vw;
+    color: #61bfd9; }
+
+.notices {
+  height: 108vw;
+  width: 100vw;
+  margin-top: 6vw;
+  padding-top: 20px;
+  font-family: "Harabara Mais Light", sans-serif; }
+  .notices h2 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    display: inline-block; }
+  .notices .notices-text {
+    padding: 0 10px 0 10px;
+    text-align: center;
+    min-width: 350px;
+    display: inline-block; }
+  @media screen and (max-width: 375px) {
+    .notices .notices-text {
+      min-width: 300px; } }
+  .notices p {
+    margin-top: 10px;
+    line-height: 17px; }
+  .notices .notice-container {
+    width: 100%;
+    max-width: 414px;
+    margin-top: 6vw;
+    padding-top: 6vw;
+    background-color: #fbfbfb; }
+  .notices .first-user-name {
+    display: inline-block;
+    position: relative;
+    top: -20vw;
+    left: 25.5vw;
+    color: #c0001b;
+    font-weight: bold; }
+  .notices .first-notice-image {
+    position: relative;
+    width: 22vw;
+    left: -33vw;
+    top: 6vw; }
+  .notices .name {
+    text-transform: uppercase; }
+  .notices .first-user-notice {
+    display: inline-block;
+    width: 64vw;
+    min-width: 64vw;
+    position: relative;
+    top: -19vw;
+    left: 30vw;
+    color: #425761; }
+  .notices .place-time {
+    display: inline-block;
+    font-size: .7em;
+    color: #b8b8b8; }
+  @media screen and (max-width: 374px) {
+    .notices .first-user-notice {
+      left: 30vw; }
+    .notices .first-notice-image {
+      left: -41vw; } }
+  .notices .second-notice-image {
+    position: relative;
+    width: 22vw;
+    left: 7.5vw;
+    top: -14vw; }
+  .notices .second-user-name {
+    display: inline-block;
+    position: relative;
+    top: -10vw;
+    left: -25.5vw;
+    color: #c0001b;
+    font-weight: bold; }
+  .notices .second-user-notice {
+    display: inline-block;
+    width: 65vw;
+    min-width: 65vw;
+    position: relative;
+    top: -10vw;
+    left: 5vw;
+    color: #425761;
+    text-align: right; }
+  @media screen and (max-width: 374px) {
+    .notices {
+      height: 142vw; }
+      .notices .second-user-notice {
+        left: 4vw; }
+      .notices .second-user-name {
+        left: 35vw; }
+      .notices .second-notice-image {
+        left: 6.5vw;
+        top: -24vw; } }
+  @media screen and (min-width: 414px) {
+    .notices {
+      height: 94vw; }
+      .notices .second-user-name {
+        margin-left: 3.5vw; }
+      .notices .second-notice-image {
+        left: 9.5vw;
+        top: -9vw; } }
+
+.social-network {
+  font-family: "Harabara Mais Light", sans-serif;
+  width: 100vw;
+  height: 66vw;
+  background: url(../img/social.jpg) no-repeat top center;
+  background-size: 100%; }
+  .social-network h2, .social-network h4, .social-network h5, .social-network h3, .social-network h6 {
+    text-transform: uppercase; }
+  .social-network h4 {
+    font-size: 3.5vw;
+    display: inline-block;
+    margin-left: 22.5vw;
+    margin-top: 4vw;
+    letter-spacing: 1px;
+    color: #fff; }
+  .social-network h2 {
+    font-size: 7vw;
+    margin-left: 35vw;
+    margin-top: 2vw;
+    color: #fff; }
+  .social-network h5 {
+    text-transform: uppercase;
+    font-size: 4vw;
+    margin-top: 1vw;
+    margin-left: 45vw;
+    color: #c31a45; }
+  .social-network .bottom-logo {
+    height: 20vw;
+    margin-left: 42vw; }
+  .social-network h6 {
+    font-size: 3vw;
+    margin-left: 15vw;
+    margin-top: 2vw;
+    color: #fff; }
+  .social-network h3 {
+    font-size: 4vw;
+    margin-left: 8vw;
+    color: #fff; }
+  .social-network .social-icons {
+    height: 10vw;
+    margin-left: 5vw; }
+  .social-network .icons-container {
+    margin-top: 2vw;
+    margin-left: 5vw; }
 
 /*# sourceMappingURL=main.css.map */
