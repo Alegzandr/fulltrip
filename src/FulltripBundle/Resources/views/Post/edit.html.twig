@@ -1,9 +1,9 @@
 {% extends 'FulltripBundle::base.html.twig' %}
 
-{% block title %}Proposer une activité{% endblock %}
+{% block title %}Modifier une activité{% endblock %}
 {% block main %}
     <section>
-        {{ form_start(form, {'name': 'post-create', 'method': 'post', 'action': path('fulltrip_post_create')}) }}
+        {{ form_start(form, {'name': 'edit', 'action': '/post/' ~ place.id ~ '/edit'}) }}
         {{ form_widget(form) }}
         {{ form_end(form) }}
     </section>

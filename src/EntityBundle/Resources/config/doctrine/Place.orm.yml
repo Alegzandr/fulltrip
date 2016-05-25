@@ -35,6 +35,10 @@ EntityBundle\Entity\Place:
         addDate:
             type: datetime
             column: add_date
+        updateDate:
+            type: datetime
+            column: update_date
+            nullable: true
         postName:
             type: string
             lenght: 255
