@@ -1,5 +1,6 @@
 .paris {
   height: 70vw;
+  width: 100vw;
   padding-top: 20px;
   font-family: "Harabara Mais Light", sans-serif;
 
@@ -12,7 +13,13 @@
   .destination-text {
     padding: 0 10px 0 10px;
     text-align: center;
+    min-width: 350px;
+  }
 
+  @media screen and (max-width: 375px) {
+    .destination-text {
+      min-width: 300px;
+    }
   }
 
   p {
@@ -29,16 +36,60 @@
   }
 
   h4 {
-    font-size: 1.2em;
-    margin-left: 35.52vw;
+    font-size: 4vw;
+    margin-left: 35vw;
     margin-top: 26vw;
     display: inline-block;
+    color: $secondary-text-color;
 
   }
-  .paris-title {
-    font-size: 5em;
-    margin-left: 30vw;
-    margin-top: 30vw;
+  .destination-title {
+    font-size: 17.5vw;
+    margin-left: 9.4vw;
+    display: inline-block;
+    letter-spacing: 1.8vw;
+    color: $secondary-color;
+  }
+
+  .fa-star {
+    color: $secondary-color;
+  }
+
+  .stars-container {
+    margin-top: 4.5vw;
+    margin-left: 11vw;
+    display: inline-block;
+    font-size: 1.3em;
+  }
+
+  .gradient-bottom {
+    height: 14vw;
+    width: 100vw;
+    margin-top: 9vw;
+    background: linear-gradient(to top, rgba(104, 176, 200, 1), rgba(0, 0, 0, 0));
+  }
+
+  .activities-container{
+    position: relative;
+    display: inline-block;
+    top: -13vw;
+    left: 62vw;
+  }
+
+  .activities-text {
+    color: $secondary-text-color;
+    font-size: 2.7vw;
+    font-weight: bold;
+    position: relative;
+    top: -6vw;
+    left: 11.7vw;
     display: inline-block;
   }
+
+  .activities-number {
+    font-size: 21vw;
+    color: $secondary-text-color;
+  }
+
 }
+

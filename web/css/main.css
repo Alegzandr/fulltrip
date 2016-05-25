@@ -164,6 +164,7 @@ nav {
 
 .paris {
   height: 70vw;
+  width: 100vw;
   padding-top: 20px;
   font-family: "Harabara Mais Light", sans-serif; }
   .paris h2 {
@@ -171,7 +172,11 @@ nav {
     font-size: 1.5em; }
   .paris .destination-text {
     padding: 0 10px 0 10px;
-    text-align: center; }
+    text-align: center;
+    min-width: 350px; }
+  @media screen and (max-width: 375px) {
+    .paris .destination-text {
+      min-width: 300px; } }
   .paris p {
     margin-top: 10px;
     line-height: 17px; }
@@ -182,14 +187,44 @@ nav {
     width: 100vw;
     height: 100%; }
   .paris h4 {
-    font-size: 1.2em;
-    margin-left: 35.52vw;
+    font-size: 4vw;
+    margin-left: 35vw;
     margin-top: 26vw;
+    display: inline-block;
+    color: #c5234c; }
+  .paris .destination-title {
+    font-size: 17.5vw;
+    margin-left: 9.4vw;
+    display: inline-block;
+    letter-spacing: 1.8vw;
+    color: #fff; }
+  .paris .fa-star {
+    color: #fff; }
+  .paris .stars-container {
+    margin-top: 4.5vw;
+    margin-left: 11vw;
+    display: inline-block;
+    font-size: 1.3em; }
+  .paris .gradient-bottom {
+    height: 14vw;
+    width: 100vw;
+    margin-top: 9vw;
+    background: linear-gradient(to top, #68b0c8, transparent); }
+  .paris .activities-container {
+    position: relative;
+    display: inline-block;
+    top: -13vw;
+    left: 62vw; }
+  .paris .activities-text {
+    color: #c5234c;
+    font-size: 2.7vw;
+    font-weight: bold;
+    position: relative;
+    top: -6vw;
+    left: 11.7vw;
     display: inline-block; }
-  .paris .paris-title {
-    font-size: 5em;
-    margin-left: 30vw;
-    margin-top: 30vw;
-    display: inline-block; }
+  .paris .activities-number {
+    font-size: 21vw;
+    color: #c5234c; }
 
 /*# sourceMappingURL=main.css.map */
