@@ -16,10 +16,12 @@
     min-width: 350px;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 374px) {
     .destination-text {
       min-width: 300px;
     }
+
+    height: 110vw;
   }
 
   p {
@@ -95,7 +97,6 @@
 }
 
 .bastia {
-
   font-family: "Harabara Mais Light", sans-serif;
   width: 100vw;
   height: 69vw;
@@ -227,7 +228,7 @@
 }
 
 .notices {
-  height: 99vw;
+  height: 108vw;
   width: 100vw;
   margin-top: 6vw;
   padding-top: 20px;
@@ -251,6 +252,7 @@
     .notices-text {
       min-width: 300px;
     }
+
   }
 
   p {
@@ -302,6 +304,7 @@
   }
 
   @media screen and (max-width: 374px) {
+
     .first-user-notice {
       left: 30vw;
     }
@@ -351,6 +354,8 @@
       left: 6.5vw;
       top: -24vw;
     }
+
+    height: 142vw;
   }
 
   @media screen and (min-width: 414px) {
@@ -362,6 +367,70 @@
       left: 9.5vw;
       top: -9vw;
     }
+    height: 94vw;
+  }
+}
+
+.social-network {
+  font-family: "Harabara Mais Light", sans-serif;
+  width: 100vw;
+  height: 66vw;
+  background: url(../img/social.jpg) no-repeat top center;
+  background-size: 100%;
+
+  h2, h4, h5, h3, h6 {
+    text-transform: uppercase;
   }
 
+  h4 {
+    font-size: 3.5vw;
+    display: inline-block;
+    margin-left: 22.5vw;
+    margin-top: 4vw;
+    letter-spacing: 1px;
+    color: $secondary-color;
+  }
+
+  h2 {
+    font-size: 7vw;
+    margin-left: 35vw;
+    margin-top: 2vw;
+    color: $secondary-color;
+  }
+
+  h5 {
+    text-transform: uppercase;
+    font-size: 4vw;
+    margin-top: 1vw;
+    margin-left: 45vw;
+    color: $primary-color;
+  }
+
+  .bottom-logo {
+    height: 20vw;
+    margin-left: 42vw;
+  }
+
+  h6 {
+    font-size: 3vw;
+    margin-left: 15vw;
+    margin-top: 2vw;
+    color: $secondary-color;
+  }
+
+  h3 {
+    font-size: 4vw;
+    margin-left: 8vw;
+    color: $secondary-color;
+  }
+
+  .social-icons {
+    height: 10vw;
+    margin-left: 5vw;
+  }
+
+  .icons-container {
+    margin-top: 2vw;
+    margin-left: 5vw;
+  }
 }
