@@ -10,7 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
-class PostFormType extends AbstractType
+class PostEditFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {

@@ -71,7 +71,7 @@ class PostController extends Controller
                 array('form' => $form->createView())
             );
         } else {
-            return $this->redirectToRoute('fulltrip_homepage');
+            return $this->redirectToRoute('fos_user_security_login');
         }
     }
 }

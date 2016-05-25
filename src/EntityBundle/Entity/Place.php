@@ -2,6 +2,9 @@
 
 namespace EntityBundle\Entity;
 
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 /**
  * Place
  */
@@ -41,6 +44,25 @@ class Place
      * @var int
      */
     private $score;
+
+    /**
+     * @var string
+     */
+    private $postName;
+
+    /**
+     * NOTE: This is not a mapped field of entity metadata, just a simple property.
+     *
+     * @Vich\UploadableField(mapping="post", fileNameProperty="postName")
+     *
+     * @var File
+     */
+    private $post;
+
+    /**
+     * @var \DateTime
+     */
+    private $updatedAt;
 
 
     /**
@@ -312,5 +334,81 @@ class Place
     public function getDescription()
     {
         return $this->description;
+    }
+
+
+    /**
+     * If manually uploading a file (i.e. not using Symfony Form) ensure an instance
+     * of 'UploadedFile' is injected into this setter to trigger the  update. If this
+     * bundle's configuration parameter 'inject_on_load' is set to 'true' this setter
+     * must be able to accept an instance of 'File' as the bundle will inject one here
+     * during Doctrine hydration.
+     *
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $post
+     *
+     * @return Place
+     */
+    public function setPost(File $post = null)
+    {
+        $this->post = $post;
+
+        if ($post) {
+            // It is required that at least one field changes if you are using doctrine
+            // otherwise the event listeners won't be called and the file is lost
+            $this->updatedAt = new \DateTime('now');
+        }
+
+        return $this;
+    }
+
+    public function getPost()
+    {
+        return $this->post;
+    }
+
+    /**
+     * Set postName
+     *
+     * @param string $postName
+     * @return Place
+     */
+    public function setPostName($postName)
+    {
+        $this->postName = $postName;
+
+        return $this;
+    }
+
+    /**
+     * Get postName
+     *
+     * @return string
+     */
+    public function getPostName()
+    {
+        return $this->postName;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     * @return Place
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
     }
 }

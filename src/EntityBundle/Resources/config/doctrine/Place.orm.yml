@@ -35,6 +35,15 @@ EntityBundle\Entity\Place:
         addDate:
             type: datetime
             column: add_date
+        postName:
+            type: string
+            lenght: 255
+            column: post_name
+            nullable: true
+        updatedAt:
+            type: datetime
+            column: updated_at
+            nullable: true
     manyToOne:
         user:
             targetEntity: EntityBundle\Entity\User

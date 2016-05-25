@@ -91,3 +91,7 @@ vich_uploader:
             uri_prefix: /upload/avatar
             upload_destination: %kernel.root_dir%/../web/upload/avatar
             namer: vich_uploader.namer_uniqid
+        post:
+            uri_prefix: /upload/post
+            upload_destination: %kernel.root_dir%/../web/upload/post
+            namer: vich_uploader.namer_uniqid

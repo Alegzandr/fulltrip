@@ -165,7 +165,7 @@ class User extends BaseUser
      *
      * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $avatar
      *
-     * @return Product
+     * @return User
      */
     public function setAvatar(File $avatar = null)
     {

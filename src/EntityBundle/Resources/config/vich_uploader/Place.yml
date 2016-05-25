@@ -1,0 +1,4 @@
+EntityBundle\Entity\Place:
+    post:
+        mapping:           post
+        filename_property: post_name
