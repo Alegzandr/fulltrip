@@ -1,3 +1,7 @@
+fulltrip_post_delete:
+    path:     /post/{id}/delete
+    defaults: { _controller: FulltripBundle:Post:delete }
+
 fulltrip_post_edit:
     path:     /post/{id}/edit
     defaults: { _controller: FulltripBundle:Post:edit }

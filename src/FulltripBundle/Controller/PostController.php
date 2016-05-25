@@ -131,4 +131,20 @@ class PostController extends Controller
             return $this->redirectToRoute('fos_user_security_login');
         }
     }
+
+    public function deleteAction($id)
+    {
+        if ($this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY')) {
+            $place = $this->getDoctrine()
+                ->getRepository('EntityBundle:Place')
+                ->findOneById(array($id));
+            if ($place->getUser() === $this->container->get('security.context')->getToken()->getUser()) {
+                $em = $this->getDoctrine()->getManager();
+                $em->remove($place);
+                $em->flush();
+            }
+            return $this->redirectToRoute('fulltrip_dashboard');
+        }
+        return $this->redirectToRoute('fulltrip_homepage');
+    }
 }
