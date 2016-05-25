@@ -317,11 +317,105 @@ nav {
     font-size: 2.3vw;
     font-weight: bold;
     position: relative;
-    top: -11.5vw;
+    top: -10.5vw;
     left: 8.5vw;
     display: inline-block; }
   .lyon .activities-number {
     font-size: 19vw;
     color: #61bfd9; }
+
+.notices {
+  height: 99vw;
+  width: 100vw;
+  margin-top: 6vw;
+  padding-top: 20px;
+  font-family: "Harabara Mais Light", sans-serif; }
+  .notices h2 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    display: inline-block; }
+  .notices .notices-text {
+    padding: 0 10px 0 10px;
+    text-align: center;
+    min-width: 350px;
+    display: inline-block; }
+  @media screen and (max-width: 375px) {
+    .notices .notices-text {
+      min-width: 300px; } }
+  .notices p {
+    margin-top: 10px;
+    line-height: 17px; }
+  .notices .notice-container {
+    width: 100%;
+    max-width: 414px;
+    margin-top: 6vw;
+    padding-top: 6vw;
+    background-color: #fbfbfb; }
+  .notices .first-user-name {
+    display: inline-block;
+    position: relative;
+    top: -20vw;
+    left: 25.5vw;
+    color: #c0001b;
+    font-weight: bold; }
+  .notices .first-notice-image {
+    position: relative;
+    width: 22vw;
+    left: -33vw;
+    top: 6vw; }
+  .notices .name {
+    text-transform: uppercase; }
+  .notices .first-user-notice {
+    display: inline-block;
+    width: 64vw;
+    min-width: 64vw;
+    position: relative;
+    top: -19vw;
+    left: 30vw;
+    color: #425761; }
+  .notices .place-time {
+    display: inline-block;
+    font-size: .7em;
+    color: #b8b8b8; }
+  @media screen and (max-width: 374px) {
+    .notices .first-user-notice {
+      left: 30vw; }
+    .notices .first-notice-image {
+      left: -41vw; } }
+  .notices .second-notice-image {
+    position: relative;
+    width: 22vw;
+    left: 7.5vw;
+    top: -14vw; }
+  .notices .second-user-name {
+    display: inline-block;
+    position: relative;
+    top: -10vw;
+    left: -25.5vw;
+    color: #c0001b;
+    font-weight: bold; }
+  .notices .second-user-notice {
+    display: inline-block;
+    width: 65vw;
+    min-width: 65vw;
+    position: relative;
+    top: -10vw;
+    left: 5vw;
+    color: #425761;
+    text-align: right; }
+  @media screen and (max-width: 374px) {
+    .notices .second-user-notice {
+      left: 4vw; }
+    .notices .second-user-name {
+      left: 35vw; }
+    .notices .second-notice-image {
+      left: 6.5vw;
+      top: -24vw; } }
+  @media screen and (min-width: 414px) {
+    .notices .second-user-name {
+      margin-left: 3.5vw; }
+    .notices .second-notice-image {
+      left: 9.5vw;
+      top: -9vw; } }
 
 /*# sourceMappingURL=main.css.map */
