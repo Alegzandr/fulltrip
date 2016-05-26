@@ -20,6 +20,8 @@
     </section>
 
     <aside class="stay">
+        <div id="map" style="height: 500px"></div>
+
         <h3>Votre séjour</h3>
         <h4>Voici le récapitulatif de votre séjour</h4>
 
@@ -27,18 +29,24 @@
             <thead>
             <tr>
                 <th colspan="2">
-                        <h3>{{ form.vars.value.city }}"</h3>
-                    </form>
+                    <h3>
+                        {% if form.vars.value.city is defined %}
+                            {{ form.vars.value.city[:1]|upper ~ form.vars.value.city[1:] }}
+                        {% endif %}
+                    </h3>
                 </th>
             </tr>
             </thead>
             <tbody>
-             <!-- TODO: Complete with jQuery -->
+            <!-- TODO: Complete with jQuery -->
             </tbody>
         </table>
     </aside>
 {% endblock %}
 
 {% block javascripts %}
+    <script src="{{ asset('js/map.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPJHqDG8xtLCrc9wlLW_aJ5-naekV7LUI&callback=initMap&libraries=places"
+            async defer></script>
     <script src="{{ asset('js/stay.js') }}"></script>
 {% endblock %}
