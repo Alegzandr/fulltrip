@@ -3,6 +3,7 @@ namespace FulltripBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use EntityBundle\Entity\Place;
+use EntityBundle\Entity\Stay;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\SearchType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
@@ -21,7 +22,7 @@ class SearchController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $places = $this->getDoctrine()
                 ->getRepository('EntityBundle:Place')
-                ->findByCity((array) $form->getData(), array('id' => 'desc'));
+                ->findByCity((array)$form->getData(), array('id' => 'desc'));
         }
 
         return $this->render(

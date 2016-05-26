@@ -11,10 +11,34 @@
             {% for places in places %}
                 <li>
                     <a href="/post/{{ places.id }}">{{ places.name }}</a>
+                    <a href="/post/{{ places.id }}/stay-add" class="add">+</a>
                     <hr>
 
                 </li>
             {% endfor %}
         </ul>
     </section>
+
+    <aside class="stay">
+        <h3>Votre séjour</h3>
+        <h4>Voici le récapitulatif de votre séjour</h4>
+
+        <table>
+            <thead>
+            <tr>
+                <th colspan="2">
+                        <h3>{{ form.vars.value.city }}"</h3>
+                    </form>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+             <!-- TODO: Complete with jQuery -->
+            </tbody>
+        </table>
+    </aside>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/stay.js') }}"></script>
 {% endblock %}

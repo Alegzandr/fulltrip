@@ -1,3 +1,11 @@
+fulltrip_stay_delete:
+    path:     /post/{id}/stay-delete
+    defaults: { _controller: FulltripBundle:Stay:delete }
+
+fulltrip_stay_add:
+    path:     /post/{id}/stay-add
+    defaults: { _controller: FulltripBundle:Stay:add }
+
 fulltrip_post_delete:
     path:     /post/{id}/delete
     defaults: { _controller: FulltripBundle:Post:delete }

@@ -1,0 +1,35 @@
+EntityBundle\Entity\Stay:
+    type: entity
+    table: null
+    repositoryClass: EntityBundle\Repository\StayRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+        user:
+            targetEntity: EntityBundle\Entity\User
+            inversedBy: user
+            cascade: ["persist"]
+            joinColumn:
+                name: user_id
+                referencedColumnName: id
+    manyToMany:
+        places:
+            targetEntity: EntityBundle\Entity\Place
+            inversedBy: places
+            cascade: ["persist"]
+            joinColumn:
+                name: place_id
+                referencedColumnName: id
+    fields:
+        addDate:
+            type: datetime
+            column: add_date
+        updateDate:
+            type: datetime
+            column: update_date
+            nullable: true
+    lifecycleCallbacks: {  }
