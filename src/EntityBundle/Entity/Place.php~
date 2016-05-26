@@ -411,4 +411,62 @@ class Place
     {
         return $this->updatedAt;
     }
+    /**
+     * @var \DateTime
+     */
+    private $updateDate;
+
+
+    /**
+     * Set updateDate
+     *
+     * @param \DateTime $updateDate
+     *
+     * @return Place
+     */
+    public function setUpdateDate($updateDate)
+    {
+        $this->updateDate = $updateDate;
+
+        return $this;
+    }
+
+    /**
+     * Get updateDate
+     *
+     * @return \DateTime
+     */
+    public function getUpdateDate()
+    {
+        return $this->updateDate;
+    }
+    /**
+     * @var integer
+     */
+    private $userId;
+
+
+    /**
+     * Set userId
+     *
+     * @param integer $userId
+     *
+     * @return Place
+     */
+    public function setUserId($userId)
+    {
+        $this->userId = $userId;
+
+        return $this;
+    }
+
+    /**
+     * Get userId
+     *
+     * @return integer
+     */
+    public function getUserId()
+    {
+        return $this->userId;
+    }
 }

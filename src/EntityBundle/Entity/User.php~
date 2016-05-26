@@ -5,6 +5,9 @@ namespace EntityBundle\Entity;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\UserInterface;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 
 /**
  * User
@@ -162,7 +165,7 @@ class User extends BaseUser
      *
      * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $avatar
      *
-     * @return Product
+     * @return User
      */
     public function setAvatar(File $avatar = null)
     {
@@ -255,5 +258,33 @@ class User extends BaseUser
     public function getAvatarName()
     {
         return $this->avatarName;
+    }
+    /**
+     * @var \DateTime
+     */
+    private $updatedAt;
+
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     * @return User
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime 
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
     }
 }

@@ -21,3 +21,19 @@ fulltrip_search:
 fulltrip_homepage:
     path:     /
     defaults: { _controller: FulltripBundle:Default:index }
+
+fulltrip_dashboard:
+    path:     /dashboard
+    defaults: { _controller: FulltripBundle:Dashboard:index }
+
+fulltrip_dashboard:
+    path:     /dashboard
+    defaults: { _controller: FulltripBundle:Dashboard:index }
+
+fulltrip_dashboard_edit:
+    path:   /dashboard/{id}/edit
+    defaults: { _controller: FulltripBundle:Post:edit }
+
+fulltrip_dashboard_delete:
+    path:   /dashboard/{id}/delete
+    defaults: { _controller: FulltripBundle:Post:delete }

@@ -1,0 +1,21 @@
+{% extends 'FulltripBundle::base.html.twig' %}
+
+{% block title %}{% endblock %}
+{% block main %}
+    <a href="/profile">Mon Profil</a>
+    {% for place in place %}
+        <h1>{{ place.name }} à {{ place.city }}</h1>
+        <hr>
+        <img src="{{ vich_uploader_asset(place, 'post') }}" alt="{{ place.name }}">
+        <p>Catégorie : {{ place.category[:1]|upper ~ place.category[1:] }}</p>
+        <p>Adresse : {{ place.address }}, {{ place.zipCode }} {{ place.city }}</p>
+        <p>Prix : < {{ place.price }} €</p>
+
+        <div>
+            Description :<br>
+            {{ place.description }}
+        </div>
+        <a href="/dashboard/{{ place.id }}/edit">Modifier</a>
+        <a href="/dashboard/{{ place.id }}/remove">Supprimer</a>
+    {% endfor %}
+    </table>{% endblock %}
