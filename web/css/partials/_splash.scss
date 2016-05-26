@@ -7,15 +7,15 @@
   z-index: 0;
   text-align: center;
 
-    .logo {
+  .logo {
     display: none;
   }
 
-     h2 {
+  h2 {
     display: none;
   }
 
-     h1, input[type="search"]{
+  h1, input[type="search"] {
     position: absolute;
     font-family: "Harabara Mais Light", sans-serif;
     color: $secondary-color;
@@ -25,19 +25,19 @@
     display: block;
   }
 
-     h1 {
+  h1 {
     text-transform: uppercase;
     letter-spacing: 1.2px;
   }
 
-     h1:nth-of-type(1) {
+  h1:nth-of-type(1) {
     font-family: "Harabara Mais Light", sans-serif;
     font-size: 1.4em;
     width: 100vw;
     top: 29vw;
   }
 
-    h1:nth-of-type(2) {
+  h1:nth-of-type(2) {
     font-family: "Harabara Mais Light", sans-serif;
     font-size: 2.25em;
     display: block;
@@ -70,6 +70,93 @@
     width: 80%;
     border-top: 1px solid $secondary-color;
     border-bottom: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .splash {
+    background: url(../img/splash.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+
+    position: relative;
+    z-index: 0;
+
+    .logo {
+      width: 200px;
+
+      position: absolute;
+      top: 38%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    h1, h2 {
+      font-family: "Harabara Mais Light", sans-serif;
+      color: $secondary-color;
+      text-transform: uppercase;
+      font-size: 1.875em;
+      text-align: center;
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      letter-spacing: 4px;
+    }
+
+    h1:nth-of-type(2) {
+      font-size: 3.125em;
+      top: 15%;
+    }
+
+    h2 {
+      top: 21%;
+      font-family: "Harabara Mais", sans-serif;
+      color: $primary-color;
+    }
+
+    input[type="search"] {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      font-size: 1.875em;
+      color: $secondary-color;
+      transform: translate(-50%, -50%);
+      padding: 15px 20px;
+      background-color: rgba(0, 0, 0, .5);
+      border: 0;
+      border-radius: 15px;
+      font-family: "Harabara Mais Light", sans-serif;
+      text-transform: uppercase;
+    }
+
+    .fa-search {
+      position: absolute;
+      color: $secondary-color;
+      transform: translate(-50%, -50%);
+      top: 69.5%;
+      left: 50%;
+      margin-left: 235px;
+      font-size: 2.3em;
+      cursor: pointer;
+    }
+
+    hr {
+      border: 0;
+      height: 10px;
+      width: 100vw;
+      background-color: $separator-color;
+      position: absolute;
+      top: 99vh;
+      left: 0;
+      z-index: 2;
+    }
   }
 }
 
