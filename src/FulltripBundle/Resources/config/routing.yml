@@ -34,6 +34,3 @@ fulltrip_dashboard_edit:
     path:   /dashboard/{id}/edit
     defaults: { _controller: FulltripBundle:Post:edit }
 
-fulltrip_dashboard_delete:
-    path:   /dashboard/{id}/delete
-    defaults: { _controller: FulltripBundle:Post:delete }

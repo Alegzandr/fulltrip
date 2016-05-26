@@ -15,7 +15,14 @@ class DashboardController extends Controller
 {
     public function indexAction()
     {
-        if ($this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY')) {
+        if ($this->container->get('security.context')->isGranted('ROLE_ADMIN')) {
+            $place = $this->getDoctrine()
+                ->getRepository('EntityBundle:Place')
+                ->findBy(array(), array('id' => 'desc'));
+
+            return $this->render('FulltripBundle:Dashboard:index.html.twig', array('place' => $place));
+        }
+        else if ($this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY')) {
             $user = $this->get('security.context')->getToken()->getUser();
             $place = $this->getDoctrine()
                 ->getRepository('EntityBundle:Place')
@@ -26,6 +33,4 @@ class DashboardController extends Controller
             exit;
         }
     }
-    
-
 }

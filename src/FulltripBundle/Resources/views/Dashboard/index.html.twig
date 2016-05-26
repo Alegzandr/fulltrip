@@ -16,6 +16,6 @@
             {{ place.description }}
         </div>
         <a href="/dashboard/{{ place.id }}/edit">Modifier</a>
-        <a href="/dashboard/{{ place.id }}/remove">Supprimer</a>
+        <a href="{{ '/post/' ~ place.id ~ '/delete' }}">Supprimer</a>
     {% endfor %}
     </table>{% endblock %}

@@ -78,12 +78,13 @@ class PostController extends Controller
 
     public function editAction(Request $request, $id)
     {
+
         if ($this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY')) {
             $place = $this->getDoctrine()
                 ->getRepository('EntityBundle:Place')
                 ->findOneById(array($id));
 
-            if ($place->getUser() === $this->get('security.context')->getToken()->getUser()) {
+            if ($place->getUser() === $this->get('security.context')->getToken()->getUser() || $this->container->get('security.context')->isGranted('ROLE_ADMIN')) {
                 $form = $this->createForm(PostEditFormType::class, $place);
 
                 $form->handleRequest($request);
@@ -138,7 +139,7 @@ class PostController extends Controller
             $place = $this->getDoctrine()
                 ->getRepository('EntityBundle:Place')
                 ->findOneById(array($id));
-            if ($place->getUser() === $this->container->get('security.context')->getToken()->getUser()) {
+            if ($place->getUser() === $this->container->get('security.context')->getToken()->getUser() || $this->container->get('security.context')->isGranted('ROLE_ADMIN')) {
                 $em = $this->getDoctrine()->getManager();
                 $em->remove($place);
                 $em->flush();
