@@ -109,12 +109,15 @@ nav {
   margin-left: 10px; }
 
 .mobile-menu > ul > li {
-  color: #fff;
   font-family: "Harabara Mais Light", sans-serif;
   text-transform: uppercase;
   font-size: 3vw;
   margin-top: 20px;
   cursor: pointer; }
+
+.mobile-menu > ul > li > a {
+  color: #fff;
+  text-decoration: none; }
 
 @media (min-width: 1025px) {
   .mobile-menu {
@@ -125,51 +128,7 @@ nav {
 
   header {
     font-family: "Harabara Mais", sans-serif;
-    padding: 0;
-   /* nav {
-      position: static;
-      top: auto;
-      left: auto;
-
-      ul > li {
-        display: inline-block;
-      }
-    }
-
-    nav a, nav a:hover, nav a:active {
-      color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      font-family: "Harabara Mais", sans-serif;
-      text-transform: uppercase;
-      font-size: 1.25em;
-    }
-
-    nav > ul > li:first-of-type {
-      a {
-        border: 2px solid #fff;
-        border-radius: 10px;
-      }
-    }
-
-    nav > ul {
-      width: 100vw;
-      margin-top: 40px;
-    }
-
-    nav > ul > li:nth-of-type(1) {
-      float: left;
-      margin-left: 40px;
-    }
-
-    nav > ul > li:nth-of-type(2) {
-      float: right;
-      margin-right: 40px;
-    }
-
-    .sm-menu {
-      display: none;
-    }*/ }
+    padding: 0; }
     header .lg {
       display: inline-block;
       position: absolute;
@@ -589,7 +548,7 @@ nav {
       background: url(../img/bastia-lg.jpg) no-repeat top center;
       background-size: 100%;
       width: 100vw;
-      height: 101vw; }
+      height: 77.6vw; }
       .bastia h2 {
         font-size: 3vw;
         margin-top: 2%; }
@@ -598,7 +557,7 @@ nav {
         font-size: 1.3vw;
         margin-top: 1.5%; }
       .bastia h4 {
-        margin-top: 16vw; }
+        margin-top: 19vw; }
       .bastia .destination-title {
         margin-top: 0; }
       .bastia h5 {
@@ -607,7 +566,7 @@ nav {
         font-size: 2vw;
         color: #c31a45;
         position: relative;
-        top: -34vw;
+        top: -37vw;
         left: 27.3vw; }
       .bastia .destination-description {
         display: inline-block;
@@ -616,13 +575,13 @@ nav {
         width: 43vw;
         line-height: 1.5;
         position: relative;
-        top: -33vw;
+        top: -36vw;
         left: 53.8vw; }
       .bastia .stars-container {
         font-size: 1.5vw;
         margin-left: 90vw;
         position: relative;
-        top: 7.9vw; }
+        top: 4.9vw; }
       .bastia .fa-star, .bastia .fa-star-half-o {
         color: #c31a45; }
       .bastia .destination-name {
@@ -633,13 +592,7 @@ nav {
       .bastia .activities-text {
         top: -10.4vw; }
       .bastia .activities-container {
-        top: -16.5vw; }
-      .bastia .section-end {
-        display: block;
-        width: 100%;
-        border-top: 8px solid #66b1c8;
-        border-bottom: 0;
-        margin-top: -30.5%; } }
+        top: -19.5vw; } }
 
 .lyon {
   font-family: "Harabara Mais Light", sans-serif;
@@ -691,6 +644,57 @@ nav {
   .lyon .activities-number {
     font-size: 19vw;
     color: #61bfd9; }
+  @media screen and (min-width: 1025px) {
+    .lyon {
+      background: url(../img/lyon-lg.jpg) no-repeat top center;
+      background-size: 100%;
+      width: 100vw;
+      height: 93vw; }
+      .lyon h2 {
+        font-size: 3vw;
+        margin-top: 2%; }
+      .lyon p {
+        color: #f02054;
+        font-size: 1.3vw;
+        margin-top: 1.5%; }
+      .lyon h4 {
+        margin-top: 28vw; }
+      .lyon .destination-title {
+        margin-top: 0; }
+      .lyon h5 {
+        font-family: "Harabara Mais Light", sans-serif;
+        display: inline-block;
+        font-size: 2vw;
+        color: #3ccce4;
+        position: relative;
+        top: -33vw;
+        left: -21vw; }
+      .lyon .destination-description {
+        display: inline-block;
+        font-family: "Harabara Mais Light", sans-serif;
+        color: #fff;
+        width: 43vw;
+        line-height: 1.5;
+        position: relative;
+        top: -31.7vw;
+        left: 3.8vw; }
+      .lyon .stars-container {
+        font-size: 1.5vw;
+        margin-left: 4vw;
+        position: relative;
+        top: -0.4vw; }
+      .lyon .fa-star, .lyon .fa-star-half-o {
+        color: #44d8f3; }
+      .lyon .destination-name {
+        font-size: 3vw;
+        color: #fff; }
+      .lyon .gradient-bottom {
+        height: 17.2vw;
+        margin-top: 19.3vw; }
+      .lyon .activities-text {
+        top: -10.5vw; }
+      .lyon .activities-container {
+        top: -16.8vw; } }
 
 .notices {
   height: 108vw;
@@ -790,6 +794,63 @@ nav {
         left: 9.5vw;
         top: -9vw; } }
 
+@media screen and (min-width: 1025px) {
+  .lg-notices {
+    display: block;
+    height: 52.2vw;
+    width: 100vw;
+    margin-top: 6vw;
+    padding-top: 20px;
+    font-family: "Harabara Mais Light", sans-serif; }
+    .lg-notices .notices-text {
+      margin-top: -8vw;
+      text-align: center; }
+    .lg-notices h2 {
+      text-transform: uppercase;
+      font-size: 3.5vw;
+      display: inline-block; }
+    .lg-notices .first-notice-image {
+      margin-left: 12vw;
+      height: 14vw;
+      margin-top: 1vw; }
+    .lg-notices .first-user-name {
+      margin-left: 26vw;
+      margin-top: 5.8vw;
+      color: #c31a45;
+      font-size: 1.8vw; }
+    .lg-notices .second-notice-image {
+      margin-left: 66vw;
+      height: 14vw;
+      margin-top: -9vw; }
+    .lg-notices .second-user-name {
+      margin-left: 48vw;
+      margin-top: 5.8vw;
+      color: #c31a45;
+      font-size: 1.8vw; }
+    .lg-notices .first-user-notice {
+      display: inline-block;
+      width: 40vw;
+      position: relative;
+      top: -1vw;
+      margin-left: 2vw;
+      font-size: 1.3vw;
+      line-height: 2;
+      color: #425761; }
+    .lg-notices .second-user-notice {
+      display: inline-block;
+      width: 35vw;
+      position: relative;
+      top: 4vw;
+      margin-left: 30vw;
+      font-size: 1.3vw;
+      line-height: 2;
+      color: #425761; }
+    .lg-notices .place-time {
+      color: #cbcbcb; }
+    .lg-notices .section-end {
+      border-top: 8px solid #e4eaed;
+      border-bottom: 0;
+      margin-top: 10vw; } }
 .social-network {
   font-family: "Harabara Mais Light", sans-serif;
   width: 100vw;
@@ -834,5 +895,36 @@ nav {
   .social-network .icons-container {
     margin-top: 2vw;
     margin-left: 5vw; }
+  @media screen and (min-width: 1025px) {
+    .social-network {
+      width: 100vw;
+      height: 61vw;
+      background: url(../img/lg-social.jpg) no-repeat top center;
+      background-size: 100%; } }
+  .social-network h4 {
+    font-size: 1.6vw;
+    margin-left: 36.5vw;
+    margin-top: 3vw; }
+  .social-network h2 {
+    font-size: 4vw;
+    margin-left: 40vw;
+    margin-top: 2vw; }
+  .social-network h5 {
+    font-size: 2.5vw;
+    margin-top: 1vw;
+    margin-left: 44vw; }
+  .social-network .bottom-logo {
+    margin-left: 39vw; }
+  .social-network h6 {
+    font-size: 2vw;
+    margin-left: 24vw;
+    margin-top: 8vw; }
+  .social-network h3 {
+    font-size: 3vw;
+    margin-left: 15vw; }
+  .social-network .social-icons {
+    height: 6vw;
+    margin-left: 9vw;
+    margin-top: 2vw; }
 
 /*# sourceMappingURL=main.css.map */
