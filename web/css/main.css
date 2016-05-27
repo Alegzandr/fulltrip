@@ -719,7 +719,6 @@ nav {
     line-height: 17px; }
   .notices .notice-container {
     width: 100%;
-    max-width: 414px;
     margin-top: 6vw;
     padding-top: 6vw;
     background-color: #fbfbfb; }
