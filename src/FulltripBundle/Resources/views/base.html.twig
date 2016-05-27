@@ -19,13 +19,21 @@
     <div class="lg">
         <ul>
             <li class="propose-activity"><a href="/post/create">Proposer une activité</a></li>
-            <li class="login-register">
-                {% if app.user %}
-                    <a href="/dashboard">Connecté</a>
-                {% else %}
+            {% if app.user %}
+                <li class="login-register">
+                    <a href="/dashboard">Dashboard</a>
+                </li>
+                <li class="login-register">
+                    <a href="/profile">-</a>
+                </li>
+                <li class="login-register">
+                    <a href="/logout">Se déconnecter</a>
+                </li>
+            {% else %}
+                <li class="login-register">
                     <a href="#" id="login">Inscription / Connexion</a>
-                {% endif %}
-            </li>
+                </li>
+            {% endif %}
         </ul>
     </div>
 </header>
@@ -56,27 +64,26 @@
             <a href="/">Page d'acceuil</a>
         </li>
         <li>
-            <a href="#">Télécharger l'application</a>
+            <a href="/post/create">Proposer une activité</a>
         </li>
-        <li>
-            {% if app.user %}
-                <a href="/dashboard">Connecté</a>
-            {% else %}
+        {% if app.user %}
+            <li>
+                <a href="/dashboard">Dashboard</a>
+            </li>
+            <li>
+                <a href="/profile">Profil</a>
+            </li>
+            <li>
+                <a href="/logout">Se déconnecter</a>
+            </li>
+        {% else %}
+            <li>
                 <a href="#">Connexion</a>
-            {% endif %}
-        </li>
-        <li>
-            <a href="/register">Inscription</a>
-        </li>
-        <li>
-            <a href="#">Proposer une activité</a>
-        </li>
-        <li>
-            <a href="#">Rechercher</a>
-        </li>
-        <li>
-            <a href="#">Comment ça marche?</a>
-        </li>
+            </li>
+            <li>
+                <a href="/register">Inscription</a>
+            </li>
+        {% endif %}
     </ul>
 </nav>
 

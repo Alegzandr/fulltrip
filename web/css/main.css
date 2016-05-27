@@ -145,7 +145,7 @@ nav {
       border-radius: 10px;
       position: relative;
       border: 2px solid #fff;
-      left: -31vw;
+      left: -30vw;
       top: 2vw; }
     header .login-register {
       position: relative;
@@ -221,53 +221,53 @@ nav {
     height: 100vh;
     top: -81px;
     position: relative;
-   /* h1:nth-of-type(2) {
-      font-size: 3.125em;
-      top: 15%;
-    }
+    /* h1:nth-of-type(2) {
+       font-size: 3.125em;
+       top: 15%;
+     }
 
-    h2 {
-      top: 21%;
-      font-family: "Harabara Mais", sans-serif;
-      color: $primary-color;
-    }
+     h2 {
+       top: 21%;
+       font-family: "Harabara Mais", sans-serif;
+       color: $primary-color;
+     }
 
-    input[type="search"] {
-      position: absolute;
-      top: 70%;
-      left: 50%;
-      font-size: 1.875em;
-      color: $secondary-color;
-      transform: translate(-50%, -50%);
-      padding: 15px 20px;
-      background-color: rgba(0, 0, 0, .5);
-      border: 0;
-      border-radius: 15px;
-      font-family: "Harabara Mais Light", sans-serif;
-      text-transform: uppercase;
-    }
+     input[type="search"] {
+       position: absolute;
+       top: 70%;
+       left: 50%;
+       font-size: 1.875em;
+       color: $secondary-color;
+       transform: translate(-50%, -50%);
+       padding: 15px 20px;
+       background-color: rgba(0, 0, 0, .5);
+       border: 0;
+       border-radius: 15px;
+       font-family: "Harabara Mais Light", sans-serif;
+       text-transform: uppercase;
+     }
 
-    .fa-search {
-      position: absolute;
-      color: $secondary-color;
-      transform: translate(-50%, -50%);
-      top: 69.5%;
-      left: 50%;
-      margin-left: 235px;
-      font-size: 2.3em;
-      cursor: pointer;
-    }
+     .fa-search {
+       position: absolute;
+       color: $secondary-color;
+       transform: translate(-50%, -50%);
+       top: 69.5%;
+       left: 50%;
+       margin-left: 235px;
+       font-size: 2.3em;
+       cursor: pointer;
+     }
 
-    hr {
-      border: 0;
-      height: 10px;
-      width: 100vw;
-      background-color: $separator-color;
-      position: absolute;
-      top: 99vh;
-      left: 0;
-      z-index: 2;
-    }*/ }
+     hr {
+       border: 0;
+       height: 10px;
+       width: 100vw;
+       background-color: $separator-color;
+       position: absolute;
+       top: 99vh;
+       left: 0;
+       z-index: 2;
+     }*/ }
     .splash h1:nth-of-type(1) {
       font-size: 2vw;
       top: 5vw; }
