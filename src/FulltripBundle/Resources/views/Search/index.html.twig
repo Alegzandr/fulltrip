@@ -7,6 +7,12 @@
         {{ form_widget(form.city, { 'attr': {'class': 'city'} }) }}
         {{ form_end(form) }}
 
+        <form action="#" name="filters">
+            <input type="range" name="distance">
+            <input type="range" name="price">
+            <input type="range" name="grade">
+        </form>
+
         <ul class="places">
             {% for places in places %}
                 <li>
@@ -26,6 +32,13 @@
 
                     <a href="/post/{{ places.id }}/stay-add" class="add">+</a>
                     <a href="/post/{{ places.id }}">{{ places.name }}</a>
+                    {% if places.grade != 0 %}
+                        <span class="average-stars">{{ places.grade / 2 }}</span>
+                    {% else %}
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                    {% endif %}
                     <p>{{ places.description }}</p>
                 </li>
             {% endfor %}
@@ -63,4 +76,5 @@
             async defer></script>
     <script src="{{ asset('js/stay.js') }}"></script>
     <script src="{{ asset('js/autocomplete.js') }}"></script>
+    <script src="{{ asset('js/stars.js') }}"></script>
 {% endblock %}

@@ -29,6 +29,9 @@ EntityBundle\Entity\Place:
             length: 255
         price:
             type: float
+        grade:
+            type: integer
+            nullable: true
         distance:
             type: integer
         addDate:

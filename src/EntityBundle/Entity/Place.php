@@ -498,4 +498,33 @@ class Place
     {
         return $this->distance;
     }
+    /**
+     * @var integer
+     */
+    private $grade;
+
+
+    /**
+     * Set grade
+     *
+     * @param integer $grade
+     *
+     * @return Place
+     */
+    public function setGrade($grade)
+    {
+        $this->grade = $grade;
+
+        return $this;
+    }
+
+    /**
+     * Get grade
+     *
+     * @return integer
+     */
+    public function getGrade()
+    {
+        return $this->grade;
+    }
 }

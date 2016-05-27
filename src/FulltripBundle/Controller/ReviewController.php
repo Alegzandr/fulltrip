@@ -29,6 +29,29 @@ class ReviewController extends Controller
 
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($review);
+                $em->persist($place);
+                $em->flush();
+
+                $place = $this->getDoctrine()
+                    ->getRepository('EntityBundle:Place')
+                    ->findOneById($review->getPlace()->getId());
+                $allReviews = $this->getDoctrine()
+                    ->getRepository('EntityBundle:Review')
+                    ->findByPlace($place);
+
+                $average = array();
+                if (!empty($allReviews)) {
+                    foreach ($allReviews as $value) {
+                        array_push($average, $value->getGrade());
+                    }
+                    $average = round(array_sum($average) / count($average) * 1.2, 0);
+                } else {
+                    $average = $form->getData()->getGrade();
+                }
+
+                $place->setGrade($average);
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($place);
                 $em->flush();
 
                 $response = new Response();
@@ -72,6 +95,28 @@ class ReviewController extends Controller
             if ($review->getUser() === $this->container->get('security.context')->getToken()->getUser() || $this->container->get('security.context')->isGranted('ROLE_ADMIN')) {
                 $em = $this->getDoctrine()->getManager();
                 $em->remove($review);
+                $em->flush();
+
+                $place = $this->getDoctrine()
+                    ->getRepository('EntityBundle:Place')
+                    ->findOneById($review->getPlace()->getId());
+                $allReviews = $this->getDoctrine()
+                    ->getRepository('EntityBundle:Review')
+                    ->findByPlace($place);
+
+                $average = array();
+                if (!empty($allReviews)) {
+                    foreach ($allReviews as $value) {
+                        array_push($average, $value->getGrade());
+                    }
+                    $average = round(array_sum($average) / count($average) * 1.2, 0);
+                } else {
+                    $average = NULL;
+                }
+
+                $place->setGrade($average);
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($place);
                 $em->flush();
             }
 

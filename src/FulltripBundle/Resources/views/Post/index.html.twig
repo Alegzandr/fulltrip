@@ -16,6 +16,16 @@
                 < {{ place.price }} €
             {% endif %}
         </p>
+        <p>
+            Note :
+            {% if place.grade != 0 %}
+                <span class="average-stars">{{ place.grade / 2 }}</span>
+            {% else %}
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+            {% endif %}
+        </p>
 
         <div>
             Description :<br>
