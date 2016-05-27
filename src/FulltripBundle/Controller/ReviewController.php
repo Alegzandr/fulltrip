@@ -62,4 +62,22 @@ class ReviewController extends Controller
             return $this->redirectToRoute('fos_user_security_login');
         }
     }
+
+    public function deleteAction($id)
+    {
+        if ($this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY')) {
+            $review = $this->getDoctrine()
+                ->getRepository('EntityBundle:Review')
+                ->findOneById(array($id));
+            if ($review->getUser() === $this->container->get('security.context')->getToken()->getUser() || $this->container->get('security.context')->isGranted('ROLE_ADMIN')) {
+                $em = $this->getDoctrine()->getManager();
+                $em->remove($review);
+                $em->flush();
+            }
+
+            return $this->redirect($_SERVER['HTTP_REFERER'], 301);
+        }
+
+        return $this->redirectToRoute('fulltrip_homepage');
+    }
 }

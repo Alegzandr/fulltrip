@@ -40,6 +40,12 @@
             <span class="stars">{{ reviews.grade }}</span>
             <span>{{ reviews.user.firstName }}</span>
             <div class="comments">{{ reviews.comment }}</div>
+            {% if app.user %}
+                {% if app.user.id == reviews.user.id %}
+                    <a href="{{ '/review/' ~ reviews.id ~'/delete' }}">Supprimer</a>
+                    <br>
+                {% endif %}
+            {% endif %}
         {% endfor %}
     </section>
 {% endblock %}

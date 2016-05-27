@@ -1,3 +1,7 @@
+fulltrip_review_delete:
+    path:     /review/{id}/delete
+    defaults: { _controller: FulltripBundle:Review:delete}
+
 fulltrip_autocomplete:
     path:     /autocomplete
     defaults: { _controller: FulltripBundle:Search:autocomplete}
