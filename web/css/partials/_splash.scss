@@ -83,34 +83,76 @@
 
     width: 100vw;
     height: 100vh;
-    margin: 0;
-
+    top: -81px;
     position: relative;
-    z-index: 0;
 
-    .logo {
-      width: 200px;
-
-      position: absolute;
-      top: 38%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    h1:nth-of-type(1) {
+      font-size: 2vw;
+      top: 5vw;
     }
 
-    h1, h2 {
-      font-family: "Harabara Mais Light", sans-serif;
-      color: $secondary-color;
-      text-transform: uppercase;
-      font-size: 1.875em;
-      text-align: center;
+    h1:nth-of-type(2) {
+      font-size: 3.3vw;
+      top: 8.5vw;
+    }
+
+    .logo {
+      display: inline-block;
       position: absolute;
+      height: 12vw;
+      top: 23%;
+      margin-left: -5vw;
+    }
+
+    h2 {
+      display: inline-block;
+      font-family: "Harabara Mais", sans-serif;
+      text-transform: uppercase;
+      color: $primary-color;
+      font-size: 1.5vw;
+      position: absolute;
+      margin-top: 6.5vw;
+    }
+
+
+    h1, h2 {
       top: 10%;
       left: 50%;
       transform: translate(-50%, -50%);
       letter-spacing: 4px;
     }
 
-    h1:nth-of-type(2) {
+    input[type="search"] {
+      padding-top: 16px;
+      padding-left: 32px;
+      top: 37vw;
+      width: 45%;
+      height: 4vw;
+      font-size: 1.6vw;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-radius: 12px;
+    }
+
+    .fa-search {
+      font-size: 2.3vw;
+      top: 37.8vw;
+      left: 35vw;
+    }
+
+    hr {
+      width: 100%;
+      border-bottom: 8px solid #b0bec5;
+      top: 99.5%;
+      border-top: 1px solid #b0bec5;
+    }
+
+    @media (max-width: 1919px) {
+
+    }
+
+
+   /* h1:nth-of-type(2) {
       font-size: 3.125em;
       top: 15%;
     }
@@ -156,7 +198,8 @@
       top: 99vh;
       left: 0;
       z-index: 2;
-    }
+    }*/
+
   }
 }
 

@@ -1,3 +1,7 @@
+.not-sm {
+  display: none;
+}
+
 .paris {
   height: 99vw;
   width: 100vw;
@@ -74,7 +78,7 @@
   .activities-container {
     position: relative;
     display: inline-block;
-    top: -12vw;
+    top: -11.5vw;
     left: 62vw;
     height: 50px;
   }
@@ -84,9 +88,21 @@
     font-size: 2.3vw;
     font-weight: bold;
     position: relative;
-    top: -6.5vw;
+    top: -6vw;
     left: 10.7vw;
     display: inline-block;
+  }
+
+  @media screen and (max-width: 413px) {
+    .activities-container {
+      top: -13.5vw;
+    }
+  }
+
+  @media screen and (max-width: 374px) {
+    .activities-text {
+      top: -7vw;
+    }
   }
 
   .activities-number {
@@ -94,7 +110,65 @@
     color: #61bfd9;
   }
 
+  @media screen and (min-width: 1025px) {
+    background: url(../img/paris-lg.jpg) no-repeat top center;
+    background-size: 100%;
+    width: 100vw;
+    height: 101vw;
+    margin-top: -76px;
+  }
+
+  .paris-image {
+    background: none;
+  }
+
 }
+
+@media screen and (min-width: 1025px) {
+  .how-it-works {
+    display: block;
+    margin-top: -12px;
+    font-family: "Harabara Mais Light", sans-serif;
+
+    h2 {
+      font-family: "Harabara Mais", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 2vw;
+      color: #333333;
+    }
+
+    ul > li {
+      display: inline-block;
+      text-align: center;
+      width: 17vw;
+      margin-left: 12%;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      color: $primary-color;
+      font-size: 1.3vw;
+      margin-top: 20%;
+    }
+
+    img {
+      height: 11vw ;
+    }
+
+    ul {
+      margin-top: 100px;
+    }
+
+    p {
+      font-size: 1.1vw;
+      margin-top: 10%;
+      color: #758e9a;
+    }
+
+  }
+}
+
 
 .bastia {
   font-family: "Harabara Mais Light", sans-serif;
@@ -219,6 +293,12 @@
     top: -10.5vw;
     left: 8.5vw;
     display: inline-block;
+  }
+
+  @media screen and (max-width: 413px) {
+    .activities-text {
+      top: -11.1vw;
+    }
   }
 
   .activities-number {
