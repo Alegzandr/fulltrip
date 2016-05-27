@@ -142,9 +142,9 @@
 
     hr {
       width: 100%;
-      border-bottom: 8px solid #b0bec5;
+      border-top: 8px solid #b0bec5;
+      border-bottom: 0;
       top: 99.5%;
-      border-top: 1px solid #b0bec5;
     }
 
     @media (max-width: 1919px) {
