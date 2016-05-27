@@ -19,7 +19,13 @@
     <div class="lg">
         <ul>
             <li class="propose-activity"><a href="/post/create">Proposer une activité</a></li>
-            <li class="login-register"><a href="#" id="login">Inscription / Connexion</a></li>
+            <li class="login-register">
+                {% if app.user %}
+                    <a href="/dashboard">Connecté</a>
+                {% else %}
+                    <a href="#" id="login">Inscription / Connexion</a>
+                {% endif %}
+            </li>
         </ul>
     </div>
 </header>
@@ -53,7 +59,11 @@
             <a href="#">Télécharger l'application</a>
         </li>
         <li>
-            <a href="#">Connexion</a>
+            {% if app.user %}
+                <a href="/dashboard">Connecté</a>
+            {% else %}
+                <a href="#">Connexion</a>
+            {% endif %}
         </li>
         <li>
             <a href="/register">Inscription</a>
