@@ -14,12 +14,54 @@
         {{ form_end(form) }}
         <hr>
     </section>
+    <section class="not-sm how-it-works">
+        <h2>
+            Comment ça marche?
+        </h2>
+        <ul>
+            <li>
+                <img src="{{ asset('img/how-it-works1.png') }}" alt="Trouver la destination" class="how-it-works-icons">
+                <h3>
+                    Trouver la destination idéale
+                </h3>
+                <p>
+                    Recherchez parmi plus de 2500 destinations en France, la destination idéale pour vos futures
+                    vacances.
+                </p>
+                <hr>
+            </li>
+            <li>
+                <img src="{{ asset('img/how-it-works2.png') }}" alt="Constituer votre séjour"
+                     class="how-it-works-icons">
+                <h3>
+                    Constituer le séjour de votre choix
+                </h3>
+                <p>
+                    Sélectionnez des activités faites pour vous, en fonction de vos préférences, de votre humeur ou de
+                    votre budget.
+                </p>
+                <hr>
+            </li>
+            <li>
+                <img src="{{ asset('img/how-it-works3.png') }}" alt="Partez" class="how-it-works-icons">
+                <h3>
+                    Passer des vacances inoubliables
+                </h3>
+                <p>
+                    Programmez vos activités pour les avoir partout avec vous ! Du smartphone à l'impression papier, à
+                    vous de choisir !
+                </p>
+                <hr>
+            </li>
+        </ul>
+        <hr class="not-sm section-end">
+    </section>
     <section class="paris">
         <div class="destination-text">
             <h2>
                 Nos destinations du moment
             </h2>
-            <p>
+            <p class="name">
                 Découvrez notre trio du moment, les 3 destinations les
                 plus recommandées par les membres de FullTrip.
             </p>
@@ -47,8 +89,15 @@
                     activités
                 </p>
             </div>
+            <h5 class="not-sm"><span class="name destination-name">Paris,</span> La Ville Lumière</h5>
+            <p class="destination-description not-sm">
+                Voyageurs en quête de découverte ? Venez découvrir la Ville Lumière à la façon FullTrip ! Des bars
+                les plus branchés au lieux les plus étranges, Paris n'aura plus aucuns secrets pour vous ! Alors
+                venez vite découvrir nos activités.
+            </p>
         </div>
         </div>
+        <hr class="section-end">
     </section>
     <section class="bastia">
         <h4>
@@ -73,6 +122,11 @@
                 activités
             </p>
         </div>
+        <h5 class="not-sm">L'Ile de beauté <span class="name destination-name">, Bastia</span></h5>
+        <p class="destination-description not-sm">
+            Vous rêvez de vous prélasser au soleil sur les plages paradisiaques de Corse, de visiter les villages autour
+            d'un verre de vin ? Nos membres vous sélectionnent les meilleurs lieux, pour des vacances inoubliables.
+        </p>
     </section>
     <section class="lyon">
         <h4>
@@ -96,15 +150,46 @@
                 activités
             </p>
         </div>
+        <h5 class="not-sm"><span class="name destination-name">Lyon,</span> La Capitale des Gaules</h5>
+        <p class="destination-description not-sm">
+            Pour prendre le pouls d'une ville, vous imprégner de son atmosphère, le mieux est de vous y promener !
+            Théâtres, cinés, expos, musées, excursions, à Lyon il se passe toujours quelque chose !
+        </p>
     </section>
-    <section class="notices">
+    <section class="not-sm lg-notices">
         <div class="notices-text">
             <h2>
                 Ils sont partis avec Fulltrip
             </h2>
-            <p>
-                Découvrez les commentaires de personnes qui ont utilisé Fulltrip pour organiser leurs vacances.
+        </div>
+        <div class="notice-container">
+            <h6 class="first-user-name">
+                Quentin <span class="name">Buchet</span>, Paris
+            </h6>
+            <img src="{{ asset('img/lg-profil1.png') }}" alt="Quentin Buchet" class="first-notice-image">
+            <p class="first-user-notice">
+                “ Nous sommes partis à Saint-Jean-de-Luz et nous n’avons pas pas été déçus !
+                Je recommande FullTrip pour sa simplicité et pour le choix qu'offrent les membres de la communauté !
+                <span class="place-time">Séjour à Saint-Jean-de-Luz - 24/04/2016</span>
             </p>
+            <h6 class="second-user-name">
+                Laurie <span class="name">Seiller</span>, Paris
+            </h6>
+            <p class="second-user-notice">
+                ”Moi qui pensais connaître Bordeaux comme ma poche je me suis retrouvée bluffée en voyant toutes les
+                activités et les coins sympas qu'offre cette ville !
+                ”
+                <span class="place-time">Séjour à Bordeaux - 22/02/2015</span>
+            </p>
+            <img src="{{ asset('img/lg-profil2.png') }}" alt="Laurie Seiller" class="second-notice-image">
+            <hr class="section-end">
+        </div>
+    </section>
+    <section class="notices not-lg">
+        <div class="notices-text">
+            <h2>
+                Ils sont partis avec Fulltrip
+            </h2>
         </div>
         <div class="notice-container">
             <h6 class="first-user-name">
@@ -112,17 +197,18 @@
             </h6>
             <img src="{{ asset('img/profil-1.png') }}" alt="Quentin Buchet" class="first-notice-image">
             <p class="first-user-notice">
-                “ Nous sommes partis à Saint-Jean-de-Luz et nous n’avons pas pas été déçus ! Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Mauris ac consectetur odi ”
+                “ Nous sommes partis à Saint-Jean-de-Luz et nous n’avons pas pas été déçus !
+                Je recommande FullTrip pour sa simplicité et pour le choix qu'offrent les membres de la communauté !
                 <span class="place-time">Séjour à Saint-Jean-de-Luz - 24/04/2016</span>
             </p>
             <h6 class="second-user-name">
                 Laurie <span class="name">Seiller</span>, Paris
             </h6>
-           <p class="second-user-notice">
-                “ Nous sommes partis à Saint-Jean-de-Luz et nous n’avons pas pas été déçus ! Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Mauris ac consectetur odio ”
-               <span class="place-time">Séjour à Bordeaux - 22/02/2015</span>
+            <p class="second-user-notice">
+                ”Moi qui pensais connaître Bordeaux comme ma poche je me suis retrouvée bluffée en voyant toutes les
+                activités et les coins sympas qu'offre cette ville !
+                ”
+                <span class="place-time">Séjour à Bordeaux - 22/02/2015</span>
             </p>
             <img src="{{ asset('img/profil-2.png') }}" alt="Laurie Seiller" class="second-notice-image">
         </div>
@@ -139,7 +225,7 @@
         </h5>
         <img src="{{ asset('img/logo-color.png') }}" alt="FullTrip logo" class="bottom-logo">
         <h6>
-            Pour rester informés de notre actualité
+            Pour rester informés sur notre actualité
         </h6>
         <h3>
             Suivez nous sur les réseaux sociaux

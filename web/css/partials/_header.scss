@@ -10,7 +10,7 @@ header {
   text-align: center;
 }
 
-.logo {
+.sm-logo {
   height: 64.5px;
   margin-top: 5px;
   margin-left: -50px;
@@ -24,11 +24,6 @@ header {
 }
 
 nav {
-  background: url(../img/mobile-menu.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   width: 250px;
   height: 100vh;
   position: fixed;
@@ -36,56 +31,77 @@ nav {
   left: -250px;
 }
 
+.mobile-menu  {
+  background-color: #222222;
+
+}
+
+.mobile-menu > ul {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.mobile-menu > ul > li{
+  font-family: "Harabara Mais Light", sans-serif;
+  text-transform: uppercase;
+  font-size: 3vw;
+  margin-top: 20px;
+  cursor: pointer;
+
+}
+
+.mobile-menu > ul > li > a {
+  color: $secondary-color;
+  text-decoration: none;
+}
+
 @media (min-width: 1025px) {
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .not-lg {
+    display: none;
+  }
   header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    font-family: "Harabara Mais", sans-serif;
+    padding: 0;
 
-    nav {
-      position: static;
-      top: auto;
-      left: auto;
-
-      ul > li {
-        display: inline-block;
-      }
+    .lg {
+      display: inline-block;
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      margin-left: -50vw;
     }
 
-    nav a, nav a:hover, nav a:active {
-      color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      font-family: "Harabara Mais", sans-serif;
+    .lg > ul > li {
+      display: inline;
       text-transform: uppercase;
-      font-size: 1.25em;
+      font-size: 1.2vw;
+      cursor: pointer;
     }
 
-    nav > ul > li:first-of-type {
-      a {
-        border: 2px solid #fff;
-        border-radius: 10px;
-      }
+    .propose-activity {
+      padding: 13px;
+      border-radius: 10px;
+      position: relative;
+      border: 2px solid #fff;
+      left: -31vw;
+      top: 2vw;
     }
 
-    nav > ul {
-      width: 100vw;
-      margin-top: 40px;
+    .login-register {
+      position: relative;
+      top: 2vw;
+      right: -31vw;
     }
 
-    nav > ul > li:nth-of-type(1) {
-      float: left;
-      margin-left: 40px;
-    }
+    a {
+      text-decoration: none;
+      color: $secondary-color;
 
-    nav > ul > li:nth-of-type(2) {
-      float: right;
-      margin-right: 40px;
-    }
-
-    .sm-menu {
-      display: none;
     }
   }
 }

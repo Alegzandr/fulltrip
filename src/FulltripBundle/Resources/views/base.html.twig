@@ -10,17 +10,17 @@
 </head>
 <body>
 <header>
-    <a href="/#">
-        <img src="{{ asset('img/sm-logo.png') }}" alt="FullTrip logo" class="logo">
+    <a href="/#" class="not-lg">
+        <img src="{{ asset('img/sm-logo.png') }}" alt="FullTrip logo" class="sm-logo">
     </a>
-    <img src="{{ asset('img/sm-menu.png') }}" alt="Mobile menu" class="sm-menu menu-icon">
+    <img src="{{ asset('img/sm-menu.png') }}" alt="Mobile menu" class="sm-menu menu-icon not-lg">
 
-    <nav>
+    <div class="lg">
         <ul>
-            <li><a href="#">Proposer une activité</a></li>
-            <li><a href="#" id="login">Inscription / Connexion</a></li>
+            <li class="propose-activity"><a href="#">Proposer une activité</a></li>
+            <li class="login-register"><a href="#" id="login">Inscription / Connexion</a></li>
         </ul>
-    </nav>
+    </div>
 </header>
 
 <div class="modal">
@@ -43,7 +43,7 @@
     </div>
 </div>
 
-<nav>
+<nav class="mobile-menu not-lg">
     <ul>
         <li>
             <a href="/">Page d'acceuil</a>
