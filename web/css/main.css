@@ -176,7 +176,8 @@ input, button, select, option, textarea {
   font-size: 100%; }
 
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-family: sans-serif; }
 
 header > nav > ul {
   display: none; }

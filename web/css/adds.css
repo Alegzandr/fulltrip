@@ -122,6 +122,9 @@ input[type="submit"] {
   margin-left: 16px;
   font-family: "Harabara Mais", sans-serif; }
 
+body {
+  line-height: 1.1; }
+
 header {
   height: 120px; }
   header ul {
@@ -156,5 +159,7 @@ main {
     position: fixed;
     top: 120px;
     right: 25px; }
+  main .dash img {
+    width: 600px; }
 
 /*# sourceMappingURL=adds.css.map */

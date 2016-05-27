@@ -3,11 +3,11 @@
 {% block title %}Dashboard{% endblock %}
 {% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/adds.css') }}">{% endblock %}
 {% block main %}
-    <img src="{{ asset('img/logo-color.png') }}" alt="FullTrip logo" class="logo">
+    <a href="/"><img src="{{ asset('img/logo-color.png') }}" alt="FullTrip logo" class="logo"></a>
     <a href="/profile">Mon Profil</a>
 
     <h3>Activités</h3>
-    <ul>
+    <ul class="dash">
     {% for place in place %}
         <li>
             <h1>{{ place.name }} à {{ place.city }}</h1>

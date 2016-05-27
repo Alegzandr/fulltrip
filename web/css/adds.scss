@@ -2,6 +2,10 @@
 @import "modules/modals";
 @import "modules/colors";
 
+body {
+  line-height: 1.1;
+}
+
 header {
   height: 120px;
 
@@ -54,5 +58,9 @@ main {
     position: fixed;
     top: 120px;
     right: 25px;
+  }
+
+  .dash img {
+    width: 600px;
   }
 }

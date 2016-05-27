@@ -3,7 +3,7 @@
 {% block title %}Modifier une activité{% endblock %}
 {% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/adds.css') }}">{% endblock %}
 {% block main %}
-    <img src="{{ asset('img/logo-color.png') }}" alt="FullTrip logo" class="logo">
+    <a href="/"><img src="{{ asset('img/logo-color.png') }}" alt="FullTrip logo" class="logo"></a>
     <section>
         {{ form_start(form, {'name': 'edit', 'action': '/post/' ~ place.id ~ '/edit'}) }}
         {{ form_widget(form) }}
