@@ -14,7 +14,9 @@ class SearchFormType extends AbstractType
         $builder
             ->add('city', SearchType::class, array(
                 'label' => false,
-                'attr' => array('placeholder' => 'Rechercher une ville'
+                'attr' => array(
+                    'placeholder' => 'Rechercher une ville',
+                    'autocomplete' => 'off'
                 )))
             ->setMethod('GET');
     }

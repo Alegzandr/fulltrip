@@ -1,3 +1,7 @@
+fulltrip_autocomplete:
+    path:     /autocomplete
+    defaults: { _controller: FulltripBundle:Search:autocomplete}
+
 fulltrip_post_review:
     path:     /post/{id}/review
     defaults: { _controller: FulltripBundle:Review:post}

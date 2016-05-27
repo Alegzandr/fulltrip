@@ -30,4 +30,20 @@ class SearchController extends Controller
             array('form' => $form->createView(), 'places' => $places)
         );
     }
+
+    public function autocompleteAction()
+    {
+        $places = $this->getDoctrine()
+            ->getRepository('EntityBundle:Place')
+            ->findBy(array(), array('id' => 'desc'));
+        $cities = array();
+
+        foreach ($places as $value) {
+            array_push($cities, $value->getCity());
+        }
+
+        $cities = array_unique($cities, SORT_DESC);
+
+        return new Response(json_encode($cities));
+    }
 }
