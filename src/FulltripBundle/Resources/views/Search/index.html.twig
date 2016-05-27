@@ -16,10 +16,10 @@
                     <span>{{ places.category[:1]|upper ~ places.category[1:] }}</span><br>
                     <span>A {{ (places.distance / 1000)|round() }} km</span><br>
                     <span>
-                        {% if place.price == 0 %}
+                        {% if places.price == 0 %}
                             Gratuit
                         {% else %}
-                            < {{ place.price }} €
+                            < {{ places.price }} €
                         {% endif %}
                     </span>
                     <br>
