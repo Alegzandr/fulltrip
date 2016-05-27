@@ -29,8 +29,7 @@ class DashboardController extends Controller
                 ->findBy(array('user' => $user->getId()), array('id' => 'desc'));
             return $this->render('FulltripBundle:Dashboard:index.html.twig', array('user' => $user, 'place' => $place));
         } else {
-            header('Location: /');
-            exit;
+            return $this->redirectToRoute('fulltrip_homepage');
         }
     }
 }
