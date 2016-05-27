@@ -59,7 +59,7 @@ class ReviewController extends Controller
                     'success' => true
                 )));
                 $response->headers->set('Content-Type', 'application/json');
-                return $response;
+                return $this->redirectToRoute('fulltrip_homepage');
             } elseif ($form->isSubmitted()) {
                 $errors = array();
 

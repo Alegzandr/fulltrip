@@ -10,6 +10,10 @@ fulltrip_post_review:
     path:     /post/{id}/review
     defaults: { _controller: FulltripBundle:Review:post}
 
+fulltrip_stay_get:
+    path:     /stay/{user_id}
+    defaults: { _controller: FulltripBundle:Stay:get }
+
 fulltrip_stay_delete:
     path:     /post/{id}/stay-delete
     defaults: { _controller: FulltripBundle:Stay:delete }

@@ -63,7 +63,7 @@ class PostController extends Controller
                     'success' => true
                 )));
                 $response->headers->set('Content-Type', 'application/json');
-                return $response;
+                return $this->redirectToRoute('fulltrip_dashboard');
             } elseif ($form->isSubmitted()) {
                 $errors = array();
 

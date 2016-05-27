@@ -198,4 +198,15 @@ main {
   main .dash img {
     width: 600px; }
 
+.fos_user_registration_register input[type="text"], .fos_user_registration_register input[type="email"], .fos_user_registration_register input[type="password"] {
+  width: 30%;
+  margin-left: 18px;
+  height: 24px;
+  border: 1px solid #000;
+  margin-top: -5px; }
+.fos_user_registration_register input[type="radio"], .fos_user_registration_register select {
+  margin-left: 20px; }
+.fos_user_registration_register label {
+  padding-left: 25px; }
+
 /*# sourceMappingURL=adds.css.map */

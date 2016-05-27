@@ -3,6 +3,7 @@
 namespace FulltripBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use EntityBundle\Entity\User;
 use EntityBundle\Entity\Place;
 use EntityBundle\Entity\Stay;
 use Symfony\Component\HttpFoundation\Response;
@@ -29,7 +30,7 @@ class StayController extends Controller
                     $em->persist($stay);
                     $em->flush();
 
-                    $userPlaces = $stay->getPlaces();
+                    $userPlaces = (array)$stay->getPlaces();
                     $response = new Response();
                     $response->setContent(json_encode(array(
                         'valid' => true,
@@ -47,7 +48,7 @@ class StayController extends Controller
                     $em->persist($stay);
                     $em->flush();
 
-                    $userPlaces = $stay->getPlaces();
+                    $userPlaces = (array)$stay->getPlaces();
                     $response = new Response();
                     $response->setContent(json_encode(array(
                         'valid' => true,
@@ -87,7 +88,7 @@ class StayController extends Controller
                 $stay = $this->getDoctrine()
                     ->getRepository('EntityBundle:Stay')
                     ->findOneByUser($this->get('security.context')->getToken()->getUser());
-                $userPlaces = $stay->getPlaces();
+                $userPlaces = (array)$stay->getPlaces();
 
                 $stay->removePlace($place);
                 $em = $this->getDoctrine()->getManager();
@@ -119,5 +120,23 @@ class StayController extends Controller
             $response->setStatusCode(403);
             return $response;
         }
+    }
+
+    public function getAction($user_id)
+    {
+        $user = $this->getDoctrine()
+            ->getRepository('EntityBundle:User')
+            ->findOneById($user_id);
+
+        $stay = $this->getDoctrine()
+            ->getRepository('EntityBundle:Stay')
+            ->findOneByUser($user);
+
+        $response = new Response();
+        $response->setContent(json_encode(array(
+            'stay' => (array)$stay->getPlaces()
+        )));
+        $response->headers->set('Content-Type', 'application/json');
+        return $response;
     }
 }

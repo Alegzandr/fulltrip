@@ -1,6 +1,4 @@
 $(function () {
-    
-    
     $('a.add').click(function (e) {
         e.preventDefault();
 
@@ -9,7 +7,7 @@ $(function () {
             type: 'get',
             dataType: 'json',
             success: function (data) {
-                $('.stay tbody').append(data.places);
+                console.log(data);
             },
             error: function (data) {
                 console.log(data);

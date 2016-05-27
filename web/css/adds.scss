@@ -115,3 +115,21 @@ main {
     width: 600px;
   }
 }
+
+.fos_user_registration_register {
+  input[type="text"], input[type="email"], input[type="password"] {
+    width: 30%;
+    margin-left: 18px;
+    height: 24px;
+    border: 1px solid #000;
+    margin-top: -5px;
+  }
+
+  input[type="radio"], select {
+    margin-left: 20px;
+  }
+
+  label {
+    padding-left: 25px;
+  }
+}

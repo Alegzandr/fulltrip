@@ -1,7 +1,33 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
-    {{ form_widget(form) }}
+    {{ form_label(form.email) }}<br>
+    {{ form_errors(form.email) }}<br>
+    {{ form_widget(form.email) }}<br>
+
+    {{ form_label(form.plainPassword.first) }}<br>
+    {{ form_errors(form.plainPassword.first) }}<br>
+    {{ form_widget(form.plainPassword.first) }}<br>
+
+    {{ form_label(form.plainPassword.second) }}<br>
+    {{ form_errors(form.plainPassword.second) }}<br>
+    {{ form_widget(form.plainPassword.second) }}<br>
+
+    {{ form_label(form.firstname) }}<br>
+    {{ form_errors(form.firstname) }}<br>
+    {{ form_widget(form.firstname) }}<br>
+
+    {{ form_label(form.lastname) }}<br>
+    {{ form_errors(form.lastname) }}<br>
+    {{ form_widget(form.lastname) }}<br>
+
+    {{ form_label(form.gender) }}<br>
+    {{ form_errors(form.gender) }}<br>
+    {{ form_widget(form.gender) }}<br>
+
+    {{ form_label(form.birthdate) }}<br>
+    {{ form_errors(form.birthdate) }}<br>
+    {{ form_widget(form.birthdate) }}<br>
     <div>
         <input type="submit" value="{{ 'registration.submit'|trans }}" />
     </div>

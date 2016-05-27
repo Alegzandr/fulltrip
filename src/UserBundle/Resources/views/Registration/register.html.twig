@@ -1,4 +1,10 @@
-{% extends "UserBundle::layout.html.twig" %}
+{% extends "FulltripBundle::base.html.twig" %}
+
+{% block title %}S'enregistrer{% endblock %}
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/adds.css') }}">{% endblock %}
+{% block main %}
+    <a href="/"><img src="{{ asset('img/logo-color.png') }}" alt="FullTrip logo" class="logo"></a>
+{% endblock %}
 
 {% block fos_user_content %}
 {% include "FOSUserBundle:Registration:register_content.html.twig" %}
