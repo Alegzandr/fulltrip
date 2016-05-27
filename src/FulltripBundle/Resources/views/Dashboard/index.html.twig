@@ -3,19 +3,42 @@
 {% block title %}Dashboard{% endblock %}
 {% block main %}
     <a href="/profile">Mon Profil</a>
-    {% for place in place %}
-        <h1>{{ place.name }} à {{ place.city }}</h1>
-        <hr>
-        <img src="{{ vich_uploader_asset(place, 'post') }}" alt="{{ place.name }}">
-        <p>Catégorie : {{ place.category[:1]|upper ~ place.category[1:] }}</p>
-        <p>Adresse : {{ place.address }}, {{ place.zipCode }} {{ place.city }}</p>
-        <p>Prix : < {{ place.price }} €</p>
 
-        <div>
-            Description :<br>
-            {{ place.description }}
-        </div>
-        <a href="/dashboard/{{ place.id }}/edit">Modifier</a>
-        <a href="{{ '/post/' ~ place.id ~ '/delete' }}">Supprimer</a>
+    <h3>Activités</h3>
+    <ul>
+    {% for place in place %}
+        <li>
+            <h1>{{ place.name }} à {{ place.city }}</h1>
+            <hr>
+            <img src="{{ vich_uploader_asset(place, 'post') }}" alt="{{ place.name }}">
+            <p>Catégorie : {{ place.category[:1]|upper ~ place.category[1:] }}</p>
+            <p>Adresse : {{ place.address }}, {{ place.zipCode }} {{ place.city }}</p>
+            <p>Prix : < {{ place.price }} €</p>
+
+            <div>
+                Description :<br>
+                {{ place.description }}
+            </div>
+                <a href="/dashboard/{{ place.id }}/edit">Modifier</a>
+                <a href="{{ '/post/' ~ place.id ~ '/delete' }}">Supprimer</a>
+        </li>
     {% endfor %}
-    </table>{% endblock %}
+    </ul>
+
+    <h3>Avis</h3>
+    <ul>
+    {% for review in review %}
+        <li>
+            <span class="stars">{{ review.grade }}</span>
+            <span>{{ review.place.name }} à {{ review.place.city }}</span>
+            <div class="comments">{{ review.comment }}</div>
+            <a href="{{ '/review/' ~ review.id ~'/delete' }}">Supprimer</a>
+            <br>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/stars.js') }}"></script>
+{% endblock %}

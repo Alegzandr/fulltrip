@@ -5,6 +5,7 @@ namespace FulltripBundle\Controller;
 use FulltripBundle\Form\PostEditFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use EntityBundle\Entity\Place;
+use EntityBundle\Entity\Review;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -19,15 +20,28 @@ class DashboardController extends Controller
             $place = $this->getDoctrine()
                 ->getRepository('EntityBundle:Place')
                 ->findBy(array(), array('id' => 'desc'));
+            $review = $this->getDoctrine()
+                ->getRepository('EntityBundle:Review')
+                ->findBy(array(), array('id' => 'desc'));
 
-            return $this->render('FulltripBundle:Dashboard:index.html.twig', array('place' => $place));
+            return $this->render('FulltripBundle:Dashboard:index.html.twig', array(
+                'place' => $place,
+                'review' => $review
+            ));
         }
         else if ($this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY')) {
             $user = $this->get('security.context')->getToken()->getUser();
             $place = $this->getDoctrine()
                 ->getRepository('EntityBundle:Place')
                 ->findBy(array('user' => $user->getId()), array('id' => 'desc'));
-            return $this->render('FulltripBundle:Dashboard:index.html.twig', array('user' => $user, 'place' => $place));
+            $review = $this->getDoctrine()
+                ->getRepository('EntityBundle:Review')
+                ->findBy(array('user' => $user->getId()), array('id' => 'desc'));
+            return $this->render('FulltripBundle:Dashboard:index.html.twig', array(
+                'user' => $user,
+                'place' => $place,
+                'review' => $review
+                ));
         } else {
             return $this->redirectToRoute('fulltrip_homepage');
         }
