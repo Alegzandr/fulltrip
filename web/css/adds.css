@@ -142,6 +142,9 @@ header {
 main {
   width: 96vw;
   padding: 2vw; }
+  @media screen and (max-width: 1025px) {
+    main .logo {
+      display: none; } }
   main .logo {
     position: absolute;
     top: 25px;
@@ -159,6 +162,39 @@ main {
     position: fixed;
     top: 120px;
     right: 25px; }
+    main aside .stay {
+      height: 30vh;
+      width: 405px;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      background-color: #eaedf0;
+      font-family: "Harabara Mais Light", sans-serif;
+      text-transform: uppercase;
+      line-height: 1.5; }
+      main aside .stay .a-btn {
+        position: fixed;
+        bottom: 27vh;
+        right: 30px;
+        text-decoration: none;
+        color: #fff;
+        padding: 10px 25px;
+        border-radius: 10px;
+        background-color: #c31a45; }
+      main aside .stay h3 {
+        font-family: "Harabara Mais", sans-serif;
+        color: #607d8b;
+        font-size: 1.25em; }
+      main aside .stay h4 {
+        color: #acb8c6;
+        font-size: .8em; }
+      main aside .stay table > thead > tr > th {
+        color: #c31a45;
+        font-size: 1.25em; }
+      main aside .stay table {
+        margin-top: 25px;
+        margin-left: 30px; }
   main .dash img {
     width: 600px; }
 

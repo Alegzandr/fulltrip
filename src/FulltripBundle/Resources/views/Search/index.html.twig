@@ -49,26 +49,29 @@
         </ul>
     </section>
 
-    <aside class="stay">
+    <aside>
         <div id="map" style="height: 400px;width: 400px;"></div>
 
-        <h3>Votre séjour</h3>
-        <h4>Voici le récapitulatif de votre séjour</h4>
+        <div class="stay">
+            <h3>Votre séjour</h3>
+            <h4>Voici le récapitulatif de votre séjour</h4>
 
-        <table>
-            <thead>
-            <tr>
-                <th colspan="2">
-                    {% if form.vars.value.city is defined %}
-                        {{ form.vars.value.city[:1]|upper ~ form.vars.value.city[1:] }}
-                    {% endif %}
-                </th>
-            </tr>
-            </thead>
-            <tbody>
-            <!-- TODO: Complete with jQuery -->
-            </tbody>
-        </table>
+            <a href="/dashboard" class="a-btn">Valider</a>
+            <table>
+                <thead>
+                <tr>
+                    <th colspan="2">
+                        {% if form.vars.value.city is defined %}
+                            {{ form.vars.value.city[:1]|upper ~ form.vars.value.city[1:] }}
+                        {% endif %}
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- TODO: Complete with jQuery -->
+                </tbody>
+            </table>
+        </div>
     </aside>
 {% endblock %}
 

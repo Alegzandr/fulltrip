@@ -35,6 +35,11 @@ main {
   width: 96vw;
   padding: 2vw;
 
+  @media screen and (max-width: 1025px) {
+    .logo {
+      display: none;
+    }
+  }
   .logo {
     position: absolute;
     top: 25px;
@@ -58,6 +63,52 @@ main {
     position: fixed;
     top: 120px;
     right: 25px;
+
+    .stay {
+      height: 30vh;
+      width: 405px;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      background-color: $bg-div-color;
+
+      font-family: "Harabara Mais Light", sans-serif;
+      text-transform: uppercase;
+      line-height: 1.5;
+
+      .a-btn {
+        position: fixed;
+        bottom: 27vh;
+        right: 30px;
+        text-decoration: none;
+        color: $secondary-color;
+        padding: 10px 25px;
+        border-radius: 10px;
+        background-color: $primary-color;
+      }
+
+      h3 {
+        font-family: "Harabara Mais", sans-serif;
+        color: $font-primary;
+        font-size: 1.25em;
+      }
+
+      h4 {
+        color: $font-secondary;
+        font-size: .8em;
+      }
+
+      table > thead > tr > th {
+        color: $font-bright;
+        font-size: 1.25em;
+      }
+
+      table {
+        margin-top: 25px;
+        margin-left: 30px;
+      }
+    }
   }
 
   .dash img {
