@@ -1,0 +1,58 @@
+@import "modules/fonts";
+@import "modules/modals";
+@import "modules/colors";
+
+header {
+  height: 120px;
+
+  ul {
+    position: static;
+  }
+
+  .propose-activity {
+    border-color: $primary-color;
+    left: 30vw;
+
+    a {
+      color: $primary-color;
+    }
+  }
+
+  a {
+    color: $separator-color;
+  }
+
+  a:hover {
+    color: $primary-color;
+  }
+}
+
+main {
+  width: 96vw;
+  padding: 2vw;
+
+  .logo {
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    width: 60px;
+  }
+
+  .city, .fa-search {
+    position: absolute;
+    top: 40px;
+    left: 305px;
+    z-index: 3;
+  }
+
+  .fa-search {
+    top: 42px;
+    left: 450px;
+  }
+
+  aside {
+    position: fixed;
+    top: 120px;
+    right: 25px;
+  }
+}

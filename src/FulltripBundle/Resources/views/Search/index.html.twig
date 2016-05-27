@@ -1,16 +1,20 @@
 {% extends 'FulltripBundle::base.html.twig' %}
 
 {% block title %}Recherche de lieux{% endblock %}
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/adds.css') }}">{% endblock %}
 {% block main %}
+    <img src="{{ asset('img/logo-color.png') }}" alt="FullTrip logo" class="logo">
+
     <section>
         {{ form_start(form, {'name': 'search', 'action': path('fulltrip_search')}) }}
         {{ form_widget(form.city, { 'attr': {'class': 'city'} }) }}
+        <i class="fa fa-search" aria-hidden="true"></i>
         {{ form_end(form) }}
 
         <form action="#" name="filters">
-            <input type="range" name="distance">
-            <input type="range" name="price">
-            <input type="range" name="grade">
+            <input type="range" name="distance" value="20" max="50" min="0" step="1">
+            <input type="range" name="price" value="300" max="300" min="0" step="10">
+            <input type="range" name="grade" value="0" max="6" min="0" step="1">
         </form>
 
         <ul class="places">
@@ -19,13 +23,13 @@
                     <img src="{{ asset('/upload/post/' ~ places.postName) | imagine_filter('thumb') }}"
                          alt="{{ places.name }}">
                     <br>
-                    <span>{{ places.category[:1]|upper ~ places.category[1:] }}</span><br>
-                    <span>A {{ (places.distance / 1000)|round() }} km</span><br>
-                    <span>
+                    <span class="category">{{ places.category[:1]|upper ~ places.category[1:] }}</span><br>
+                    <span class="distance">A {{ (places.distance / 1000)|round() }} km</span><br>
+                    <span class="price">
                         {% if places.price == 0 %}
                             Gratuit
                         {% else %}
-                            < {{ places.price }} €
+                            &lt; {{ places.price }} €
                         {% endif %}
                     </span>
                     <br>
@@ -55,11 +59,9 @@
             <thead>
             <tr>
                 <th colspan="2">
-                    <h3>
-                        {% if form.vars.value.city is defined %}
-                            {{ form.vars.value.city[:1]|upper ~ form.vars.value.city[1:] }}
-                        {% endif %}
-                    </h3>
+                    {% if form.vars.value.city is defined %}
+                        {{ form.vars.value.city[:1]|upper ~ form.vars.value.city[1:] }}
+                    {% endif %}
                 </th>
             </tr>
             </thead>
