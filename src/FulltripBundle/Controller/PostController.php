@@ -35,6 +35,18 @@ class PostController extends Controller
                 $place->setUser($this->getUser());
                 $place->setAddDate(new \DateTime(date('Y-m-d H:i:s')));
 
+                $from = $form['address']->getData() . ', ' . $form['zipCode']->getData() . ' ' . $form['city']->getData();
+                $to = $form['city']->getData();
+                $from = urlencode($from);
+                $to = urlencode($to);
+                $data = file_get_contents("http://maps.googleapis.com/maps/api/distancematrix/json?origins=$from&destinations=$to&language=en-EN&sensor=false");
+                $data = json_decode($data);
+                $distance = 0;
+                foreach($data->rows[0]->elements as $road) {
+                    $distance += $road->distance->value;
+                }
+                $place->setDistance($distance);
+
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($place);
                 $em->flush();
@@ -90,6 +102,18 @@ class PostController extends Controller
                 $form->handleRequest($request);
                 if ($form->isSubmitted() && $form->isValid()) {
                     $place->setUpdateDate(new \DateTime(date('Y-m-d H:i:s')));
+
+                    $from = $form['address']->getData() . ', ' . $form['zipCode']->getData() . ' ' . $form['city']->getData();
+                    $to = $form['city']->getData();
+                    $from = urlencode($from);
+                    $to = urlencode($to);
+                    $data = file_get_contents("http://maps.googleapis.com/maps/api/distancematrix/json?origins=$from&destinations=$to&language=en-EN&sensor=false");
+                    $data = json_decode($data);
+                    $distance = 0;
+                    foreach($data->rows[0]->elements as $road) {
+                        $distance += $road->distance->value;
+                    }
+                    $place->setDistance($distance);
 
                     $em = $this->getDoctrine()->getManager();
                     $em->persist($place);

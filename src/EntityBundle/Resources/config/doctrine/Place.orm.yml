@@ -29,9 +29,8 @@ EntityBundle\Entity\Place:
             length: 255
         price:
             type: float
-        score:
+        distance:
             type: integer
-            nullable: true
         addDate:
             type: datetime
             column: add_date

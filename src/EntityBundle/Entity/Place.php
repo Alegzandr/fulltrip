@@ -469,4 +469,33 @@ class Place
     {
         return $this->userId;
     }
+    /**
+     * @var integer
+     */
+    private $distance;
+
+
+    /**
+     * Set distance
+     *
+     * @param integer $distance
+     *
+     * @return Place
+     */
+    public function setDistance($distance)
+    {
+        $this->distance = $distance;
+
+        return $this;
+    }
+
+    /**
+     * Get distance
+     *
+     * @return integer
+     */
+    public function getDistance()
+    {
+        return $this->distance;
+    }
 }
