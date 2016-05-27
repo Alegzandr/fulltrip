@@ -10,7 +10,6 @@ function initMap() {
     geocoder.geocode({'address': address}, function (results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             result = results[0].geometry.location;
-            console.log(result);
 
             map.setCenter(result);
 

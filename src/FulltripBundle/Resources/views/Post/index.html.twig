@@ -8,7 +8,14 @@
         <img src="{{ asset('/upload/post/' ~ place.postName) | imagine_filter('post')  }}" alt="{{ place.name }}">
         <p>Catégorie : {{ place.category[:1]|upper ~ place.category[1:] }}</p>
         <p>Adresse : {{ place.address }}, {{ place.zipCode }} {{ place.city }}</p>
-        <p>Prix : < {{ place.price }} €</p>
+        <p>
+            Prix :
+            {% if place.price == 0 %}
+                Gratuit
+            {% else %}
+                < {{ place.price }} €
+            {% endif %}
+        </p>
 
         <div>
             Description :<br>

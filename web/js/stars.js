@@ -14,9 +14,11 @@ $(function () {
     });
 
     var star = '<i class="fa fa-star" aria-hidden="true"></i>';
+    var emptyStar = '<i class="fa fa-star-o" aria-hidden="true"></i>';
     for (var j = 0; j < $('.stars').length; j++) {
         var len = parseInt($('.stars:eq(' + j + ')').html());
         $('.stars:eq(' + j + ')').html(star.repeat(len));
+        $('.stars:eq(' + j + ')').append(emptyStar.repeat(5 - len));
     }
 
 });

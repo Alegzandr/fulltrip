@@ -37,7 +37,7 @@ class PostEditFormType extends AbstractType
                     '< 300€' => '300'
                 ), 'choices_as_values' => true, 'label' => false))
             ->add('post', 'vich_image', array(
-                'required'      => false,
+                'required'      => true,
                 'allow_delete'  => true, // not mandatory, default is true
                 'download_link' => true, // not mandatory, default is true
                 'label'         => 'Photo'

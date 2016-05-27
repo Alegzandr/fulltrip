@@ -10,18 +10,30 @@
         <ul class="places">
             {% for places in places %}
                 <li>
-                    <img src="{{ asset('/upload/post/' ~ places.postName) | imagine_filter('thumb')  }}" alt="{{ places.name }}">
+                    <img src="{{ asset('/upload/post/' ~ places.postName) | imagine_filter('thumb') }}"
+                         alt="{{ places.name }}">
                     <br>
-                    <a href="/post/{{ places.id }}">{{ places.name }}</a>
+                    <span>{{ places.category[:1]|upper ~ places.category[1:] }}</span><br>
+                    <span>A {{ (places.distance / 1000)|round() }} km</span><br>
+                    <span>
+                        {% if place.price == 0 %}
+                            Gratuit
+                        {% else %}
+                            < {{ place.price }} €
+                        {% endif %}
+                    </span>
+                    <br>
+
                     <a href="/post/{{ places.id }}/stay-add" class="add">+</a>
-                    <hr>
+                    <a href="/post/{{ places.id }}">{{ places.name }}</a>
+                    <p>{{ places.description }}</p>
                 </li>
             {% endfor %}
         </ul>
     </section>
 
     <aside class="stay">
-        <div id="map" style="height: 500px"></div>
+        <div id="map" style="height: 400px;width: 400px;"></div>
 
         <h3>Votre séjour</h3>
         <h4>Voici le récapitulatif de votre séjour</h4>
