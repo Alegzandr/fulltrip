@@ -1,6 +1,7 @@
 {% extends 'FulltripBundle::base.html.twig' %}
 
 {% block title %}{{ place.name }} à {{ place.city }}{% endblock %}
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/adds.css') }}">{% endblock %}
 {% block main %}
     <section>
         <h1>{{ place.name }} à {{ place.city }}</h1>

@@ -1,7 +1,9 @@
 {% extends 'FulltripBundle::base.html.twig' %}
 
 {% block title %}Dashboard{% endblock %}
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/adds.css') }}">{% endblock %}
 {% block main %}
+    <img src="{{ asset('img/logo-color.png') }}" alt="FullTrip logo" class="logo">
     <a href="/profile">Mon Profil</a>
 
     <h3>Activités</h3>
