@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FullTrip | {% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     {% block stylesheets %}{% endblock %}
 </head>
@@ -17,7 +18,7 @@
 
     <div class="lg">
         <ul>
-            <li class="propose-activity"><a href="#">Proposer une activité</a></li>
+            <li class="propose-activity"><a href="/post/create">Proposer une activité</a></li>
             <li class="login-register"><a href="#" id="login">Inscription / Connexion</a></li>
         </ul>
     </div>
@@ -79,9 +80,11 @@
 </footer>-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script src="{{ asset('js/modals.js') }}"></script>
 <script src="{{ asset('js/login.js') }}"></script>
 <script src="{{ asset('js/menu.js') }}"></script>
+<script src="{{ asset('js/autocomplete.js') }}"></script>
 {% block javascripts %}{% endblock %}
 </body>
 </html>
