@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new EntityBundle\EntityBundle(),
             new FulltripBundle\FulltripBundle(),
             new UserBundle\UserBundle(),
+            new Liip\ImagineBundle\LiipImagineBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

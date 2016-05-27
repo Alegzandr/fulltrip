@@ -95,3 +95,18 @@ vich_uploader:
             uri_prefix: /upload/post
             upload_destination: %kernel.root_dir%/../web/upload/post
             namer: vich_uploader.namer_uniqid
+
+liip_imagine:
+    resolvers:
+       default:
+          web_path: ~
+
+    filter_sets:
+        cache: ~
+        thumb:
+            quality: 75
+            filters:
+                thumbnail: { size: [128, 128], mode: outbound }
+        post:
+            filters:
+                downscale: { max: [800, 450] }

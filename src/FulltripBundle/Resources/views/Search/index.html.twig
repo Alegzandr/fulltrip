@@ -10,10 +10,11 @@
         <ul class="places">
             {% for places in places %}
                 <li>
+                    <img src="{{ asset('/upload/post/' ~ places.postName) | imagine_filter('thumb')  }}" alt="{{ places.name }}">
+                    <br>
                     <a href="/post/{{ places.id }}">{{ places.name }}</a>
                     <a href="/post/{{ places.id }}/stay-add" class="add">+</a>
                     <hr>
-
                 </li>
             {% endfor %}
         </ul>
