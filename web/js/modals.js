@@ -13,6 +13,7 @@ $(function () {
         }
     });
 
+
     $('.mask').click(function () {
 
         $('.login-popup').fadeOut();
