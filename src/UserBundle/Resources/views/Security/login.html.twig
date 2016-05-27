@@ -10,28 +10,29 @@
         <form name="fos_user_login_form" action="{{ path("fos_user_security_check") }}" method="post">
             <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
 
-            <i class="fa fa-times" aria-hidden="true"></i>
-            <h3>Se Connecter</h3>
 
-            <i class="fa fa-user" aria-hidden="true"></i>
+            <div class="form-top">
+                <i class="fa fa-times" aria-hidden="true"></i>
+                <h3>Se Connecter</h3>
+            </div>
+
             <input type="text" id="username" name="_username" value="{{ last_username }}" required="required"
-                   placeholder="ken.kaneki@fulltrip.fr"/><br>
+                   placeholder="Adresse e-mail"/><br>
 
             <div class="center-password">
-                <i class="fa fa-lock" aria-hidden="true"></i>
                 <input type="password" id="password" name="_password" required="required"
-                       placeholder="&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;"/><br>
+                       placeholder="Mot de passe"/><br>
             </div>
-            <hr>
-
-            <div class="error"></div>
 
                 <input type="checkbox" id="remember_me" name="_remember_me" value="on"/>
-                <label for="remember_me" id="remember_me-label">{{ 'security.login.remember_me'|trans }}</label><br>
+                <label for="remember_me" class="small" id="remember_me-label">{{ 'security.login.remember_me'|trans }}</label><br>
                 <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}"/><br>
+                <hr class="form-separator">
+                <p class="not-registred small">Pas encore membre?</p>
                 <a href="/register">
-                    <input type="button" value="Devenir membre">
+                    <input type="button" value="Inscription" class="register-btn">
                 </a>
+                <div class="error"></div>
 
         </form>
 
