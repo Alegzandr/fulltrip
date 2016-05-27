@@ -1,0 +1,38 @@
+EntityBundle\Entity\Review:
+    type: entity
+    table: null
+    repositoryClass: EntityBundle\Repository\ReviewRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        addDate:
+            type: date
+            column: add_date
+        updateDate:
+            type: date
+            nullable: true
+            column: update_date
+        comment:
+            type: text
+        grade:
+            type: integer
+    manyToOne:
+        user:
+            targetEntity: EntityBundle\Entity\User
+            inversedBy: user
+            cascade: ["persist"]
+            joinColumn:
+                name: user_id
+                referencedColumnName: id
+        place:
+            targetEntity: EntityBundle\Entity\Place
+            inversedBy: place
+            cascade: ["persist"]
+            joinColumn:
+                name: place_id
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

@@ -15,4 +15,35 @@
             {{ place.description }}
         </div>
     </section>
+    <section>
+        {% if app.user %}
+            <h3>Vous en avez pensé quoi ?</h3>
+            {{ form_start(form, {'name': 'review', 'action': '/post/' ~ place.id ~'/review'}) }}
+            <span>Votre note</span>
+            <label for="review_form_grade_0" class="label-stars"><i class="fa fa-star-o" aria-hidden="true"></i></label>
+            <label for="review_form_grade_1" class="label-stars"><i class="fa fa-star-o" aria-hidden="true"></i></label>
+            <label for="review_form_grade_2" class="label-stars"><i class="fa fa-star-o" aria-hidden="true"></i></label>
+            <label for="review_form_grade_3" class="label-stars"><i class="fa fa-star-o" aria-hidden="true"></i></label>
+            <label for="review_form_grade_4" class="label-stars"><i class="fa fa-star-o" aria-hidden="true"></i></label>
+
+            {{ form_widget(form.grade) }}
+            {{ form_widget(form.comment) }}
+            <br>
+            {{ form_widget(form.save) }}
+            {{ form_end(form) }}
+        {% else %}
+            <h3>Connectez-vous pour laisser votre avis</h3>
+        {% endif %}
+
+        <h4>Avis</h4>
+        {% for reviews in reviews %}
+            <span class="stars">{{ reviews.grade }}</span>
+            <span>{{ reviews.user.firstName }}</span>
+            <div class="comments">{{ reviews.comment }}</div>
+        {% endfor %}
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/stars.js') }}"></script>
 {% endblock %}

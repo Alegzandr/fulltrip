@@ -4,15 +4,12 @@ namespace FulltripBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use EntityBundle\Entity\Place;
+use EntityBundle\Entity\Review;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\NumberType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use FulltripBundle\Form\PostFormType;
 use FulltripBundle\Form\PostEditFormType;
 use Symfony\Component\HttpFoundation\Response;
+use FulltripBundle\Form\ReviewFormType;
 
 class PostController extends Controller
 {
@@ -21,7 +18,17 @@ class PostController extends Controller
         $place = $this->getDoctrine()
             ->getRepository('EntityBundle:Place')
             ->findOneById($id);
-        return $this->render('FulltripBundle:Post:index.html.twig', array('place' => $place));
+        $reviews = $this->getDoctrine()
+            ->getRepository('EntityBundle:Review')
+            ->findByPlace($place);
+
+        $form = $this->createForm(ReviewFormType::class);
+
+        return $this->render('FulltripBundle:Post:index.html.twig', array(
+            'place' => $place,
+            'form' => $form->createView(),
+            'reviews' => $reviews
+        ));
     }
 
     public function createAction(Request $request)

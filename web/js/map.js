@@ -14,9 +14,23 @@ function initMap() {
 
             map.setCenter(result);
 
+            var contentString = address;
+            contentString = contentString.toLowerCase().replace(/\b[a-z]/g, function (letter) {
+                return letter.toUpperCase();
+            });
+            contentString = '<div style="overflow: hidden; font-size: 18px;">' + contentString + '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
             var marker = new google.maps.Marker({
                 map: map,
                 position: result
+            });
+
+            marker.addListener('click', function () {
+                infowindow.open(map, marker);
             });
         }
     });

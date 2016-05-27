@@ -28,6 +28,7 @@ class PostEditFormType extends AbstractType
             ->add('city', TextType::class, array('label' => false, 'attr' => array('placeholder' => 'Ville')))
             ->add('price', ChoiceType::class, array(
                 'choices' => array(
+                    'gratuit' => '0',
                     '< 10€' => '10',
                     '< 20€' => '20',
                     '< 50€' => '50',

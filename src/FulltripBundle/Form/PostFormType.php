@@ -28,6 +28,7 @@ class PostFormType extends AbstractType
             ->add('city', TextType::class, array('label' => false, 'attr' => array('placeholder' => 'Ville')))
             ->add('price', ChoiceType::class, array(
                 'choices' => array(
+                    'gratuit' => '0',
                     '< 10€' => '10',
                     '< 20€' => '20',
                     '< 50€' => '50',
@@ -36,10 +37,10 @@ class PostFormType extends AbstractType
                     '< 300€' => '300'
                 ), 'choices_as_values' => true, 'label' => false))
             ->add('post', 'vich_image', array(
-                'required'      => false,
-                'allow_delete'  => true, // not mandatory, default is true
+                'required' => false,
+                'allow_delete' => true, // not mandatory, default is true
                 'download_link' => true, // not mandatory, default is true
-                'label'         => 'Photo'
+                'label' => 'Photo'
             ))
             ->add('save', SubmitType::class, array('label' => 'Publier'));
     }
